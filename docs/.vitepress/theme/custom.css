@@ -1,0 +1,141 @@
+/**
+ * Orion brand palette — keep in sync with Orion-website/app/globals.css
+ * - Ink:   #000719
+ * - Mist:  #cedeff
+ * - Accent #ff4800
+ */
+:root {
+  --orion-ink: #000719;
+  --orion-mist: #cedeff;
+  --orion-accent: #ff4800;
+  --orion-accent-hover: #ff6a2b;
+  --orion-accent-deep: #e64200;
+  --orion-card: hsl(223 60% 8%);
+  --orion-secondary: hsl(223 35% 12%);
+  --orion-muted: hsl(223 30% 14%);
+  --orion-border: hsl(223 35% 18%);
+  --orion-muted-text: hsl(220 25% 65%);
+
+  --vp-font-family-base: "Saira", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Match Orion-app/app/layout.tsx — Saira via next/font there, Google Fonts here */
+body {
+  font-family: var(--vp-font-family-base);
+}
+
+.dark {
+  --vp-c-bg: var(--orion-ink);
+  --vp-c-bg-alt: var(--orion-card);
+  --vp-c-bg-elv: var(--orion-secondary);
+  --vp-c-bg-soft: var(--orion-muted);
+
+  --vp-c-border: var(--orion-border);
+  --vp-c-divider: hsl(223 35% 15%);
+  --vp-c-gutter: var(--orion-ink);
+
+  --vp-c-text-1: var(--orion-mist);
+  --vp-c-text-2: var(--orion-muted-text);
+  --vp-c-text-3: hsl(220 20% 50%);
+
+  --vp-c-gray-1: hsl(220 40% 78%);
+  --vp-c-gray-2: hsl(223 30% 22%);
+  --vp-c-gray-3: hsl(223 35% 16%);
+  --vp-c-gray-soft: rgba(206, 222, 255, 0.08);
+
+  --vp-c-brand-1: var(--orion-accent);
+  --vp-c-brand-2: var(--orion-accent-hover);
+  --vp-c-brand-3: var(--orion-accent-deep);
+  --vp-c-brand-soft: rgba(255, 72, 0, 0.14);
+
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  --vp-c-tip-1: var(--orion-accent);
+  --vp-c-tip-2: var(--orion-accent-hover);
+  --vp-c-tip-3: var(--orion-accent-deep);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-note-1: var(--orion-accent);
+  --vp-c-note-2: var(--orion-accent-hover);
+  --vp-c-note-3: var(--orion-accent-deep);
+  --vp-c-note-soft: var(--vp-c-brand-soft);
+
+  --vp-nav-bg-color: hsl(223 100% 5% / 0.82);
+  --vp-nav-screen-bg-color: var(--orion-ink);
+  /* Match Orion-website navbar: OrionLogo h-12 (48px) */
+  --vp-nav-logo-height: 48px;
+  --vp-sidebar-bg-color: var(--orion-card);
+  --vp-local-nav-bg-color: var(--orion-ink);
+
+  --vp-home-hero-name-color: var(--orion-mist);
+  --vp-home-hero-text-color: var(--orion-muted-text);
+  --vp-home-hero-image-background-image: none;
+  --vp-home-hero-image-filter: none;
+
+  --vp-button-brand-bg: var(--orion-accent);
+  --vp-button-brand-hover-bg: var(--orion-accent-hover);
+  --vp-button-brand-active-bg: var(--orion-accent-deep);
+  --vp-button-brand-text: var(--orion-ink);
+
+  --vp-custom-block-info-border: transparent;
+  --vp-custom-block-info-bg: rgba(206, 222, 255, 0.06);
+  --vp-custom-block-info-text: var(--orion-mist);
+
+  --vp-code-block-bg: var(--orion-secondary);
+  --vp-code-tab-divider: var(--orion-border);
+}
+
+.VPHero .name {
+  color: var(--orion-mist);
+}
+
+.VPHero .text {
+  color: var(--orion-mist);
+}
+
+.VPHero .tagline {
+  color: var(--orion-muted-text);
+}
+
+.VPHero .action .VPButton.brand {
+  box-shadow: 0 0 40px hsl(17 100% 50% / 0.25);
+}
+
+.VPFeature .title {
+  color: var(--orion-mist);
+}
+
+.VPFeature .details {
+  color: var(--orion-muted-text);
+}
+
+.VPFeature .box {
+  background-color: var(--orion-muted);
+  border: 1px solid var(--orion-border);
+}
+
+.VPNavBar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid hsl(223 35% 18% / 0.8);
+}
+
+.VPNavBarTitle .title span {
+  display: none;
+}
+
+.VPNavBarTitle .VPImage.logo {
+  height: 48px;
+  width: auto;
+}
+
+.VPSidebar {
+  border-right: 1px solid var(--orion-border);
+}
+
+a:hover {
+  color: var(--orion-accent-hover);
+}
