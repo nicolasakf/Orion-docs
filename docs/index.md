@@ -12,14 +12,6 @@ hero:
     - theme: alt
       text: Troubleshooting
       link: /troubleshooting/jupyter-hidden-folders-and-skills
-
-features:
-  - title: Fix-first guides
-    details: Step-by-step articles for common setup and integration issues, with macOS, Linux, and Windows paths where they differ.
-  - title: Product-focused
-    details: Written for analysts and researchers using Orion—not internal engineering runbooks.
-  - title: Open source
-    details: Docs live in the monorepo and ship independently from the app at docs.orion-agent.ai.
 ---
 
 ## Quick links
