@@ -34,6 +34,10 @@ orion
 
 This opens Orion in your browser and connects to the local Jupyter server.
 
+On first run, Orion may create a managed Python environment under `~/.orion/runtime/venv` (Windows: `%USERPROFILE%\.orion\runtime\venv`). That environment includes Jupyter and **`orion-ui`**, the library for Orion notebook UI components (`import orion_ui as ui`). You do not need a separate `pip install orion-ui` when using this default setup.
+
+If you use your own Python or Jupyter kernel instead, install `orion-ui` into that kernel's environment. See [Fix: orion_ui import error](/troubleshooting/orion-ui-import-error).
+
 ## Hosted app
 
 You can also use Orion without a local install at [app.orion-agent.ai](https://app.orion-agent.ai).

@@ -57,6 +57,10 @@ export default defineConfig({
             link: "/troubleshooting/plotly-version-compatibility",
           },
           {
+            text: "orion_ui import error",
+            link: "/troubleshooting/orion-ui-import-error",
+          },
+          {
             text: "ChatGPT Codex device authorization",
             link: "/troubleshooting/chatgpt-codex-device-authorization",
           },
