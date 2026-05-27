@@ -94,7 +94,7 @@ Pass optional `class_name="..."` on components and define matching CSS in `metad
 
 ## Component reference
 
-For the full list of helpers (`ui.input`, `ui.tabs`, `ui.progress`, and others), see [Orion UI component reference](/notebooks/orion-ui-component-reference).
+For parameter-level documentation (allowed values, defaults, date formats, and state behavior), see [Orion UI component reference](/notebooks/orion-ui-component-reference).
 
 ## Sample notebook
 
