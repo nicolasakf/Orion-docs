@@ -42,6 +42,12 @@ If you use your own Python or Jupyter kernel instead, install `orion-ui` into th
 
 You can also use Orion without a local install at [app.orion-agent.ai](https://app.orion-agent.ai).
 
+## Next steps
+
+- [Your first session](/getting-started/first-session) — connect Jupyter, open a workspace, run a cell
+- [Connect to an external Jupyter server](/troubleshooting/connect-external-jupyter) — manual server setup
+- [CLI reference](/configuration/cli-reference) — flags, `orion config`, and uninstall
+
 ## More detail
 
-See the full [Orion-app README](https://github.com/nicolasakf/Orion-app#quick-start) for CLI flags, publishing, and development setup.
+See the full [Orion-app README](https://github.com/nicolasakf/Orion-app#quick-start) for publishing and development setup.
