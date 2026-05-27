@@ -16,7 +16,13 @@ hero:
       link: /troubleshooting/
 ---
 
+<div class="home-quick-links">
+
 ## Quick links
+
+<div class="home-quick-links-grid">
+
+<div class="home-quick-links-section">
 
 ### Getting started
 
@@ -27,6 +33,10 @@ hero:
 | First notebook session | [Your first session](/getting-started/first-session) |
 | Local vs hosted | [Local vs hosted app](/getting-started/local-vs-hosted) |
 
+</div>
+
+<div class="home-quick-links-section">
+
 ### Notebooks and UI
 
 | Topic | Guide |
@@ -36,6 +46,10 @@ hero:
 | Interactive Python UI | [Orion UI (`orion_ui`)](/notebooks/orion-ui) |
 | Export HTML, PDF, and more | [Export notebooks](/notebooks/export-notebooks) |
 
+</div>
+
+<div class="home-quick-links-section">
+
 ### AI assistant
 
 | Topic | Guide |
@@ -44,6 +58,10 @@ hero:
 | Agent, Ask, Edit | [Interaction modes](/ai-assistant/agent-ask-edit-modes) |
 | Skills and slash commands | [Skills](/ai-assistant/skills) · [Built-in skills](/ai-assistant/builtin-skills) · [Slash commands](/ai-assistant/slash-commands) |
 | API keys | [API keys and providers](/configuration/api-keys-and-providers) |
+
+</div>
+
+<div class="home-quick-links-section">
 
 ### Troubleshooting
 
@@ -56,4 +74,10 @@ hero:
 | ChatGPT Plus / Pro login blocked | [Codex device authorization](/troubleshooting/chatgpt-codex-device-authorization) |
 | All troubleshooting articles | [Troubleshooting overview](/troubleshooting/) |
 
-For developer documentation (architecture, agent API, contributing), see the [Orion-app repository](https://github.com/nicolasakf/Orion-app).
+</div>
+
+</div>
+
+</div>
+
+<p class="home-dev-note">For developer documentation (architecture, agent API, contributing), see the <a href="https://github.com/nicolasakf/Orion-app">Orion-app repository</a>.</p>
