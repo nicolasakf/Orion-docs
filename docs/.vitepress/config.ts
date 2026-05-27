@@ -388,7 +388,6 @@ export default defineConfig({
     ],
     footer: {
       message: "Apache-2.0 Licensed",
-      copyright: "Copyright © Nebul4, Inc.",
     },
   },
 });
