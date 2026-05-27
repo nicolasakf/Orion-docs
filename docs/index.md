@@ -42,7 +42,7 @@ hero:
 | --- | --- |
 | Chat and models | [Chat overview](/ai-assistant/chat-overview) |
 | Agent, Ask, Edit | [Interaction modes](/ai-assistant/agent-ask-edit-modes) |
-| Skills and slash commands | [Skills](/ai-assistant/skills) · [Slash commands](/ai-assistant/slash-commands) |
+| Skills and slash commands | [Skills](/ai-assistant/skills) · [Built-in skills](/ai-assistant/builtin-skills) · [Slash commands](/ai-assistant/slash-commands) |
 | API keys | [API keys and providers](/configuration/api-keys-and-providers) |
 
 ### Troubleshooting

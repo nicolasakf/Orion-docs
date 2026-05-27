@@ -8,7 +8,9 @@ Skills are reusable instruction packages that teach Orion's assistant how to fol
 - Appear as **`/skill-name`** slash commands in chat
 - Can auto-load when the model decides they match your request (unless disabled)
 
-Orion ships **built-in skills** (for example `orion-ui`, `create-app`). Workspace skills with the **same name** override the built-in copy.
+Orion ships **built-in skills** (for example `orion-ui`, `create-app`, `create-subagent`, `chat-history`). Workspace skills with the **same name** override the built-in copy.
+
+For a full guide to each built-in skill and the Orion features they connect to, see **[Built-in skills](/ai-assistant/builtin-skills)**.
 
 ## Where to put skills
 
@@ -64,6 +66,7 @@ Jupyter may hide dot-directories by default, so skills under `.agents` or `.orio
 
 ## Related
 
+- [Built-in skills](/ai-assistant/builtin-skills) — extended guides for shipped skills
 - [Slash commands](/ai-assistant/slash-commands)
 - [Sub-agents](/ai-assistant/sub-agents)
 

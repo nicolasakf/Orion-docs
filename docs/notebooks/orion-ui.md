@@ -2,6 +2,8 @@
 
 Orion UI lets you build interactive notebook controls—sliders, selects, buttons, cards—in Python. Outputs render as native Orion components in Notebook view and App View.
 
+The **`/orion-ui`** built-in skill teaches the assistant this workflow. Extended guide: [Built-in skill: Orion UI](/ai-assistant/builtin-skills/orion-ui).
+
 Other Jupyter frontends may show a plain-text fallback for the same cell.
 
 ## Install

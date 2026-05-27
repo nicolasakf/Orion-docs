@@ -50,6 +50,8 @@ Notebook metadata at `metadata.orion.subagent` can set:
 
 Ask the assistant to "create a sub-agent for …" to scaffold the notebook.
 
+See [Built-in skill: Create sub-agent](/ai-assistant/builtin-skills/create-subagent) for the extended guide.
+
 ## Sub-agents vs skills
 
 | | Skills | Sub-agents |
@@ -60,6 +62,7 @@ Ask the assistant to "create a sub-agent for …" to scaffold the notebook.
 
 ## Related
 
+- [Built-in skill: Create sub-agent](/ai-assistant/builtin-skills/create-subagent)
 - [Slash commands](/ai-assistant/slash-commands)
 - [Skills](/ai-assistant/skills)
 

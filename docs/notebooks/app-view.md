@@ -2,6 +2,8 @@
 
 App View turns a notebook into a polished dashboard or report: sections, cards, tabs, and embedded cell outputs—without building a separate web app.
 
+The **`/create-app`** built-in skill teaches the assistant App View layout. Extended guide: [Built-in skill: Create app](/ai-assistant/builtin-skills/create-app).
+
 Use this guide when you want to present notebook results in a clean layout while keeping analysis code in Notebook view.
 
 ## When to use App View

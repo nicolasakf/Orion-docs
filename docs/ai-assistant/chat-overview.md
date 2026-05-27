@@ -52,6 +52,8 @@ When **Settings → Models** sets tool approval to **Always ask**, Orion shows e
 
 Conversations are stored locally in Orion's SQLite database under your Orion data directory (`~/.orion/orion.db` on macOS/Linux, `%USERPROFILE%\.orion\orion.db` on Windows).
 
+The assistant can search and summarize past chats when the **chat-history** built-in skill loads. See [Built-in skill: Chat history](/ai-assistant/builtin-skills/chat-history).
+
 ## Related
 
 - [Agent, Ask, and Edit modes](/ai-assistant/agent-ask-edit-modes)

@@ -81,6 +81,7 @@ Workspace wins for keys it defines.
 
 ## Related
 
+- [Built-in skill: Orion settings](/ai-assistant/builtin-skills/orion-settings)
 - [API keys and providers](/configuration/api-keys-and-providers)
 - [Models and tool approval](/configuration/models-and-tool-approval)
 

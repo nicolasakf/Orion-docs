@@ -73,6 +73,33 @@ export default defineConfig({
           { text: "Mentions", link: "/ai-assistant/mentions" },
           { text: "Slash commands", link: "/ai-assistant/slash-commands" },
           { text: "Skills", link: "/ai-assistant/skills" },
+          {
+            text: "Built-in skills",
+            link: "/ai-assistant/builtin-skills",
+            collapsed: true,
+            items: [
+              { text: "Overview", link: "/ai-assistant/builtin-skills" },
+              { text: "Create skill", link: "/ai-assistant/builtin-skills/create-skill" },
+              {
+                text: "Create sub-agent",
+                link: "/ai-assistant/builtin-skills/create-subagent",
+              },
+              { text: "Orion UI", link: "/ai-assistant/builtin-skills/orion-ui" },
+              { text: "Create app", link: "/ai-assistant/builtin-skills/create-app" },
+              {
+                text: "Orion metadata",
+                link: "/ai-assistant/builtin-skills/orion-metadata",
+              },
+              {
+                text: "Orion settings",
+                link: "/ai-assistant/builtin-skills/orion-settings",
+              },
+              {
+                text: "Chat history",
+                link: "/ai-assistant/builtin-skills/chat-history",
+              },
+            ],
+          },
           { text: "Sub-agents", link: "/ai-assistant/sub-agents" },
           {
             text: "Tool approval and compaction",
@@ -139,6 +166,9 @@ export default defineConfig({
         ],
       },
     ],
+    search: {
+      provider: "local",
+    },
     socialLinks: [
       { icon: "github", link: "https://github.com/nicolasakf/Orion-app" },
     ],
