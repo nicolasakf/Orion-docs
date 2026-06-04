@@ -29,9 +29,10 @@ Relative to your open workspace folder:
 .orion/settings.json
 ```
 
-**macOS / Linux example:** `/Users/you/projects/my-repo/.orion/settings.json`
-
-**Windows example:** `C:\Users\you\projects\my-repo\.orion\settings.json`
+| Platform | Example |
+| --- | --- |
+| **macOS / Linux** | `/Users/you/projects/my-repo/.orion/settings.json` |
+| **Windows** | `C:\Users\you\projects\my-repo\.orion\settings.json` |
 
 Workspace files are read through Jupyter's ContentsManager, so they live in the project tree and can be committed to git (never commit secrets).
 
@@ -45,16 +46,18 @@ Workspace files are read through Jupyter's ContentsManager, so they live in the 
   "settings": {
     "appearance": { "theme": "system" },
     "chat": {
-      "titleGenerationModelId": "gemini-3-flash-preview",
+      "titleGenerationModelId": "gemini-3.1-flash-lite",
       "toolApprovalMode": "always_ask",
       "pinnedModelIds": [],
-      "fontSize": 14
+      "fontSize": 12,
+      "communicationStyle": "default"
     },
+    "fileTree": { "fontSize": 12 },
     "editor": {
-      "fontSize": 14,
-      "wordWrap": "on",
-      "minimapEnabled": true,
-      "tabSize": 4,
+      "fontSize": 12,
+      "wordWrap": "off",
+      "minimapEnabled": false,
+      "tabSize": 2,
       "insertSpaces": true
     },
     "notebook": {
@@ -62,7 +65,7 @@ Workspace files are read through Jupyter's ContentsManager, so they live in the 
       "presentationHideAllCellInputs": false
     },
     "workspace": { "pinnedDirectoryPaths": [] },
-    "fileTree": { "fontSize": 14 }
+    "providers": { "credentials": {} }
   }
 }
 ```
@@ -92,13 +95,17 @@ Workspace files may also use `"settings"` instead of `"overrides"` for compatibi
 | `chat.toolApprovalMode` | `always_ask` or `auto_run` |
 | `chat.pinnedModelIds` | Models shown pinned in the picker |
 | `chat.fontSize` | Chat UI font size (10–20) |
+| `chat.communicationStyle` | `default`, `narrative`, `friendly`, `pragmatic` |
 | `editor.*` | Font size, word wrap, minimap, tab size |
 | `notebook.presentationHideAllCellInputs` | Hide inputs in presentation-style notebooks |
 | `notebook.scrollbarVisible` | Notebook scrollbar visibility |
+| `notebook.output`, `notebook.export`, `notebook.editor` | Plot/output UI, export font, editor shortcuts (see advanced doc) |
 | `workspace.pinnedDirectoryPaths` | Quick-access folders (max 50) |
 | `fileTree.fontSize` | File tree font size |
+| `agent.*` | Context compaction, tool limits, terminal/search/filesystem/web (advanced) |
+| `shell.*` | Panels, sidebar, chat chrome (advanced) |
 
-See [Workspace settings](/configuration/workspace-settings) and [Models and tool approval](/configuration/models-and-tool-approval) for UI-first configuration.
+See [Workspace settings](/configuration/workspace-settings) and [Advanced settings keys](/configuration/settings-json-advanced-keys) for paths and field-level detail. Use [Models and tool approval](/configuration/models-and-tool-approval) for UI-first model configuration.
 
 ## Security: no secrets in JSON
 
@@ -153,10 +160,11 @@ Hide all cell inputs for slide-style notebooks:
 ## Related
 
 - [Workspace settings](/configuration/workspace-settings)
+- [Advanced settings keys](/configuration/settings-json-advanced-keys)
 - [API keys and providers](/configuration/api-keys-and-providers)
 - [Models and tool approval](/configuration/models-and-tool-approval)
 - [Built-in skills hub](/ai-assistant/builtin-skills)
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

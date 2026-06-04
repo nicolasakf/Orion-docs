@@ -333,6 +333,10 @@ export default defineConfig({
             link: "/configuration/models-and-tool-approval",
           },
           { text: "Workspace settings", link: "/configuration/workspace-settings" },
+          {
+            text: "Advanced settings keys",
+            link: "/configuration/settings-json-advanced-keys",
+          },
           { text: "CLI reference", link: "/configuration/cli-reference" },
         ],
       },
