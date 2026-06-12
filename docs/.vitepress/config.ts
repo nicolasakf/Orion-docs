@@ -274,6 +274,7 @@ export default defineConfig({
           },
           { text: "Style App View with CSS", link: "/notebooks/app-view-css" },
           { text: "Export notebooks", link: "/notebooks/export-notebooks" },
+          { text: "Publish to Orion Cloud", link: "/notebooks/publish-notebooks" },
         ],
       },
       {
@@ -345,6 +346,10 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/troubleshooting/" },
           {
+            text: "First-run native modules error",
+            link: "/troubleshooting/first-run-native-modules-error",
+          },
+          {
             text: "Connect to external Jupyter",
             link: "/troubleshooting/connect-external-jupyter",
           },
@@ -373,6 +378,10 @@ export default defineConfig({
             link: "/troubleshooting/app-view-schema-errors",
           },
           { text: "PDF export blocked", link: "/troubleshooting/pdf-export-blocked" },
+          {
+            text: "Orion Cloud publish and import",
+            link: "/troubleshooting/orion-cloud-publish-and-import",
+          },
           {
             text: "ChatGPT Codex device authorization",
             link: "/troubleshooting/chatgpt-codex-device-authorization",

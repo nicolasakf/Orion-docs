@@ -102,6 +102,7 @@ pip uninstall orion-notebook
 ## Related
 
 - [Install Orion](/getting-started/install)
+- [Fix: first-run native modules error](/troubleshooting/first-run-native-modules-error)
 - [Connect to an external Jupyter server](/troubleshooting/connect-external-jupyter)
 - [Kernel and Python selection](/troubleshooting/kernel-python-selection)
 

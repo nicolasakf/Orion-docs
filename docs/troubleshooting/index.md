@@ -6,6 +6,7 @@ Fix-first guides for common Orion setup and notebook issues.
 
 | Problem | Guide |
 | --- | --- |
+| First run fails with `MODULE_NOT_FOUND` / `ensure-native-modules` | [Fix: first-run native modules error](/troubleshooting/first-run-native-modules-error) |
 | Connect Orion to your own Jupyter server | [Connect to an external Jupyter server](/troubleshooting/connect-external-jupyter) |
 | Browser blocks connection / CORS errors | [Fix Jupyter CORS connection errors](/troubleshooting/jupyter-cors-connection-failed) |
 | Workspace skills not loading from `.agents` or `.orion` | [Jupyter hidden folders and skills](/troubleshooting/jupyter-hidden-folders-and-skills) |
@@ -19,6 +20,7 @@ Fix-first guides for common Orion setup and notebook issues.
 | Plotly charts look different in Orion | [Plotly version compatibility](/troubleshooting/plotly-version-compatibility) |
 | App View shows schema errors | [Fix App View schema errors](/troubleshooting/app-view-schema-errors) |
 | PDF export fails immediately | [Fix: PDF export blocked](/troubleshooting/pdf-export-blocked) |
+| Orion Cloud publish or **Open in Orion** import fails | [Fix Orion Cloud publish and import issues](/troubleshooting/orion-cloud-publish-and-import) |
 
 ## Providers and auth
 
@@ -34,4 +36,4 @@ Fix-first guides for common Orion setup and notebook issues.
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

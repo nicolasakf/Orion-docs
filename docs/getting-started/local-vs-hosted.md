@@ -33,7 +33,9 @@ Open [app.orion-agent.ai](https://app.orion-agent.ai) in your browser without in
 - Trying Orion quickly
 - Machines where you cannot install Node.js or Python locally
 
-Hosted behavior may differ from the open-source local app (for example account features or billing). The open-source tree documents **bring-your-own-key, local-first** usage; see the [Orion-app architecture](https://github.com/nicolasakf/Orion-app/blob/main/docs/architecture.md) for technical details.
+Both local and hosted Orion support optional **Orion Cloud** sign-in for publishing notebooks and managing your account. See [Publish to Orion Cloud](/notebooks/publish-notebooks).
+
+Hosted behavior may differ from the open-source local app (for example billing). The open-source tree documents **bring-your-own-key, local-first** usage; see the [Orion-app architecture](https://github.com/nicolasakf/Orion-app/blob/main/docs/architecture.md) for technical details.
 
 ## Jupyter connection
 
@@ -55,4 +57,4 @@ Both local and hosted Orion need a **Jupyter server** to execute notebooks:
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

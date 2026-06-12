@@ -38,11 +38,16 @@ If you see "Notebook export unavailable":
 1. Wait for the notebook to finish loading.
 2. Confirm **Jupyter is connected** (kernel selector shows an active connection).
 
+## Publish instead of export
+
+To share an interactive Orion page (not a static file), use [Publish to Orion Cloud](/notebooks/publish-notebooks). Publishing captures the same visible surface as export, but creates a hosted link viewers can open in the browser.
+
 ## Related
 
+- [Publish to Orion Cloud](/notebooks/publish-notebooks)
 - [App View](/notebooks/app-view)
 - [Fix: PDF export blocked](/troubleshooting/pdf-export-blocked)
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*
