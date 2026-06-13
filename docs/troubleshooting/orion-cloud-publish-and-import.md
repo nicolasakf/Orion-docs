@@ -13,7 +13,7 @@ Use this guide when publishing to Orion Cloud fails, or when **Open in Orion** d
 
 **Symptom:** The publish dialog or sign-in flow shows **Orion Cloud is not configured in this local app** (or **Orion Cloud is not configured for this local app**).
 
-**Fix:** Use a standard Orion install from [Install Orion](/getting-started/install). Builds from source need Orion Cloud environment variables set when the app is built:
+**Fix:** Use a standard Orion install from [Install Orion](/getting-started/install). Builds from source need a `.env` file in the repo root (copy `.env.example` to `.env`) with Orion Cloud variables set before you build:
 
 - `NEXT_PUBLIC_ORION_API_BASE_URL` (typically `https://app.orion-agent.ai`)
 - `NEXT_PUBLIC_SUPABASE_URL`

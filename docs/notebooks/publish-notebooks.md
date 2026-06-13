@@ -76,7 +76,7 @@ If the publisher disabled source download, the handoff page explains that import
 
 ## Orion Cloud not configured
 
-If you built Orion from source or run a custom local build, publishing may show **Orion Cloud is not configured in this local app**. Standard installs from [Install Orion](/getting-started/install) include Orion Cloud. Self-hosted builds need the hosted API and Supabase environment variables configured at build time.
+If you built Orion from source or run a custom local build, publishing may show **Orion Cloud is not configured in this local app**. Standard installs from [Install Orion](/getting-started/install) include Orion Cloud. Self-hosted builds need `.env` in the repo root (copy `.env.example` to `.env`) with the hosted API and Supabase environment variables set before you build.
 
 See [Fix Orion Cloud publish and import issues](/troubleshooting/orion-cloud-publish-and-import) for other common errors.
 
