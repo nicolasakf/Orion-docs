@@ -69,6 +69,17 @@ If you installed from an Anaconda Prompt, `orion` may only be on PATH inside con
 powershell -ExecutionPolicy Bypass -c "iwr -useb https://www.orion-agent.ai/install.ps1 | iex"
 ```
 
+## Native SQLite on Windows and ARM64
+
+Orion stores chat history in SQLite. Recent releases prefer Node's built-in **`node:sqlite`** module, which does **not** require compiling native modules on Windows or ARM64.
+
+If you still see a **better-sqlite3** rebuild warning on first run:
+
+- Upgrade `orion-notebook` so Orion can download a newer portable Node (Node 24+) that includes `node:sqlite`.
+- Clear the cached app bundle with `orion uninstall --yes`, then run `orion --yes` again.
+
+When native chat storage cannot be initialized, Orion continues with a warning and uses an in-memory fallback (chat history will not persist across restarts until storage is fixed).
+
 ## Still stuck?
 
 - Open an issue on [GitHub](https://github.com/nicolasakf/Orion-app/issues/new) and include the full terminal output from `orion --yes`.
