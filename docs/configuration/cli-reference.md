@@ -51,6 +51,22 @@ Starts the Orion app, starts Jupyter (unless `--app-only`), opens the browser, a
 | `ORION_NO_BROWSER` | Same as `--no-browser` when set |
 | `ORION_APP_BUNDLE_URL` | Custom app bundle URL (advanced) |
 | `ORION_VERSION` | Pin version for install script |
+| `ORION_INSTALL_METHOD` | Force install script method: `npm`, `pip`, or `uv` |
+| `ORION_NPM_PACKAGE_SPEC` | Install-script override for npm tarballs/specs (CI) |
+| `ORION_PYTHON_PACKAGE_SPEC` | Install-script override for Python wheels/specs (CI) |
+| `ORION_UI_PACKAGE_SPEC` | Managed-runtime override for `orion-ui` wheels/specs (CI) |
+
+## `orion doctor`
+
+Diagnose installation, app bundle, Python/Jupyter, Node, PATH, and network state:
+
+```bash
+orion doctor
+orion doctor --json
+orion doctor --setup --json
+```
+
+Use `--setup` to run first-run setup checks without opening the browser. This may download the app bundle, portable Node, or managed Jupyter runtime if they are missing. Use `--json` for CI and support reports.
 
 ## `orion config`
 
@@ -63,7 +79,11 @@ orion config python pick
 orion config python reset
 ```
 
-Use `python pick` when Orion should use a specific Python installation for Jupyter instead of the managed venv.
+Use `python pick` when Orion should use a specific Python installation for Jupyter instead of the managed venv. Install the required notebook packages in that Python environment first:
+
+```bash
+python -m pip install -U jupyter_server ipykernel orion-ui
+```
 
 The **pip** launcher does not include `config` or `--pick-python`; it falls back to managed Jupyter when system Jupyter is incompatible.
 
@@ -90,14 +110,15 @@ npm uninstall -g orion-notebook
 pip uninstall orion-notebook
 ```
 
-## npm vs pip
+## Managed installer vs npm vs pip
 
-| Feature | npm | pip |
-| --- | --- | --- |
-| Ships full app bundle | Yes | Downloads on first run |
-| `orion config` | Yes | No |
-| `--pick-python` | Yes | No |
-| Managed Jupyter + `orion-ui` sync | Yes | Yes |
+| Feature | Managed installer (uv) | npm | pip |
+| --- | --- | --- | --- |
+| Recommended for end users | Yes | No | No |
+| Ships full app bundle | Downloads on first run | Yes | Downloads on first run |
+| `orion config` | No | Yes | No |
+| `--pick-python` | No | Yes | No |
+| Managed Jupyter + `orion-ui` sync | Yes | Yes | Yes |
 
 ## Related
 
@@ -108,4 +129,4 @@ pip uninstall orion-notebook
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

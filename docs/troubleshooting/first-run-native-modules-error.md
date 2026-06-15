@@ -14,29 +14,35 @@ This usually means the cached Orion app bundle under your Orion data directory i
 
 ## When you need this
 
-- You installed with `pip install orion-notebook` or the Windows install script fell back to pip.
+- You installed with `pip install orion-notebook` or the managed installer downloaded the app bundle on first run.
 - First run downloaded the app bundle, then crashed before Orion opened in the browser.
 - Every later `orion` run fails the same way until you clear the cache.
 
 ## Fix (recommended)
 
-Upgrade the launcher and let Orion download a fresh app bundle:
+Run diagnostics first so the support report captures the broken state:
+
+```bash
+orion doctor --json
+```
+
+Then upgrade the launcher and let Orion download a fresh app bundle:
 
 **macOS / Linux:**
 
 ```bash
-pip install -U orion-notebook
-orion --yes
+curl -fsSL https://www.orion-agent.ai/install.sh | bash
+orion doctor --setup --json
 ```
 
 **Windows (PowerShell):**
 
 ```powershell
-pip install -U orion-notebook
-orion --yes
+powershell -ExecutionPolicy Bypass -c "iwr -useb https://www.orion-agent.ai/install.ps1 | iex"
+orion doctor --setup --json
 ```
 
-If you installed with npm instead of pip:
+If you intentionally installed with npm instead of the managed installer:
 
 ```bash
 npm install -g orion-notebook@latest
@@ -63,7 +69,7 @@ To remove all Orion data (venv, settings, chat history, and caches), use `orion 
 
 ## Windows + Anaconda
 
-If you installed from an Anaconda Prompt, `orion` may only be on PATH inside conda shells. For a shell-agnostic install, use the Windows install script again (it prefers **uv** when conda is detected), or install manually:
+If you installed from an Anaconda Prompt with pip, `orion` may only be on PATH inside conda shells. For a shell-agnostic install, use the Windows install script again. It uses a uv-managed tool environment by default:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -c "iwr -useb https://www.orion-agent.ai/install.ps1 | iex"
@@ -83,6 +89,7 @@ When native chat storage cannot be initialized, Orion continues with a warning a
 ## Still stuck?
 
 - Open an issue on [GitHub](https://github.com/nicolasakf/Orion-app/issues/new) and include the full terminal output from `orion --yes`.
+- Include the output from `orion doctor --json`.
 - Mention your OS, Python version, and whether you use Anaconda or Miniconda.
 
 ## Related
