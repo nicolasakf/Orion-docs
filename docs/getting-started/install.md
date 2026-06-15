@@ -4,13 +4,21 @@ Orion runs locally: the `orion` CLI starts Jupyter, launches the Orion IDE in yo
 
 **Prerequisites:** Node.js 20+ and Python 3.8+ (for notebooks).
 
-## Install script (macOS / Linux)
+## Install script
+
+**macOS / Linux:**
 
 ```bash
 curl -fsSL https://www.orion-agent.ai/install.sh | bash
 ```
 
-The script installs `orion-notebook` via npm when Node.js 20+ is available, otherwise via pip. Pin a version with `ORION_VERSION=0.5.1` or force a method with `ORION_INSTALL_METHOD=npm|pip`.
+**Windows (PowerShell):**
+
+```powershell
+powershell -ExecutionPolicy Bypass -c "iwr -useb https://www.orion-agent.ai/install.ps1 | iex"
+```
+
+The script installs `orion-notebook` via npm when Node.js 20+ is available. When Node is missing, it prefers **uv** if conda is detected (shell-agnostic install), otherwise pip. Pin a version with `ORION_VERSION=0.5.1` or force a method with `ORION_INSTALL_METHOD=npm|pip|uv`.
 
 ## Install via npm (recommended)
 
