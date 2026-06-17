@@ -1,6 +1,6 @@
 # Built-in skills
 
-Orion ships with **built-in skills** — instruction packages the assistant can load automatically or on demand with **`/skill-name`**. They teach the agent Orion-specific workflows: notebook UI, App View layouts, settings, metadata, sub-agents, custom skills, and chat history search.
+Orion ships with **built-in skills** — instruction packages the assistant can load automatically or on demand with **`/skill-name`**. They teach the agent Orion-specific workflows: notebook UI, App View layouts, settings, metadata, sub-agents, custom skills, workspace rules, and chat history search.
 
 This page is the hub. Each built-in skill has a **longer user guide** linked below with examples, file locations, and troubleshooting. Workspace skills with the **same name** override the built-in copy.
 
@@ -9,6 +9,7 @@ This page is the hub. Each built-in skill has a **longer user guide** linked bel
 | Skill | Slash command | What it is for |
 | --- | --- | --- |
 | [Create skill](/ai-assistant/builtin-skills/create-skill) | `/create-skill` | Scaffold a new workspace `SKILL.md` under `.agents/skills` |
+| [Create rule](/ai-assistant/builtin-skills/create-rule) | `/create-rule` | Author `AGENTS.md` or `CLAUDE.md` workspace rules |
 | [Create sub-agent](/ai-assistant/builtin-skills/create-subagent) | `/create-subagent` | Author a reusable `.agent.ipynb` sub-agent notebook |
 | [Orion UI](/ai-assistant/builtin-skills/orion-ui) | `/orion-ui` | Build interactive notebook controls with Python `orion_ui` |
 | [Create app](/ai-assistant/builtin-skills/create-app) | `/create-app` | Lay out App View dashboards from notebook metadata |
@@ -49,6 +50,7 @@ Built-in skills map to product areas documented elsewhere:
 You do not need to memorize skill names. Plain-language requests work:
 
 - "Create a skill for our quarterly report workflow" → loads **create-skill**
+- "Add our TypeScript conventions to AGENTS.md" → loads **create-rule**
 - "Add sliders to this notebook" → loads **orion-ui**
 - "Turn this notebook into a dashboard" → loads **create-app** (and often **orion-ui**)
 - "What did we decide about the data pipeline last week?" → loads **chat-history**

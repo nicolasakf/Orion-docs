@@ -295,6 +295,7 @@ export default defineConfig({
             items: [
               { text: "Overview", link: "/ai-assistant/builtin-skills" },
               { text: "Create skill", link: "/ai-assistant/builtin-skills/create-skill" },
+              { text: "Create rule", link: "/ai-assistant/builtin-skills/create-rule" },
               {
                 text: "Create sub-agent",
                 link: "/ai-assistant/builtin-skills/create-subagent",
