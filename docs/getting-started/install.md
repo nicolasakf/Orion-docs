@@ -4,6 +4,15 @@ Orion runs locally: the `orion` CLI starts Jupyter, launches the Orion IDE in yo
 
 **Prerequisites:** The install script manages Orion through uv by default. Orion can create its own Python/Jupyter runtime for notebooks on first run.
 
+## Desktop app
+
+Download the current desktop installer from the [Orion releases page](https://github.com/nicolasakf/Orion-app/releases/latest):
+
+- **macOS:** Choose the `.dmg` that matches your Mac (`arm64` for Apple silicon or `x64` for Intel).
+- **Windows:** Choose the `win-x64.exe` installer.
+
+The desktop app includes the runtimes Orion needs. It checks for updates automatically and lets you choose when to restart and install them.
+
 ## Install script
 
 **macOS / Linux:**
@@ -62,6 +71,7 @@ This makes `orion` available only when that environment is active. The pip launc
 
 | Goal | Recommended path |
 | --- | --- |
+| I want a desktop app with automatic updates | Download the installer for macOS or Windows. |
 | I just want Orion to work | Use the install script. Orion manages uv, Node, Jupyter, and `orion-ui`. |
 | I want Orion to use an existing conda/venv Python | Use `npm install -g orion-notebook`, then `orion config python pick`. |
 | I want Orion installed inside one Python env | Activate that env, then run `python -m pip install orion-notebook jupyter_server ipykernel orion-ui`. |
@@ -94,6 +104,15 @@ orion doctor --setup --json
 ```
 
 Share the JSON output when opening a GitHub issue. It redacts common home-directory paths and reports OS, PATH summary, install method, app bundle, Node, Python/Jupyter, and network checks.
+
+## Update Orion
+
+In the desktop app or browser app started by the CLI, open the Orion menu or **Settings** and select **Check for updates**. When an update is available:
+
+- **Desktop app:** Download it, then select **Restart and update** when you are ready.
+- **CLI installation:** Install it in the app, or close Orion and run `orion update`. Run `orion` again after the update finishes.
+
+Orion checks for stable updates automatically. The update uses the same package manager that installed the CLI: npm, pip, or uv.
 
 ## Hosted app
 
@@ -143,7 +162,7 @@ See the [Orion-app README](https://github.com/nicolasakf/Orion-app#run-from-sour
 
 - [Your first session](/getting-started/first-session) — connect Jupyter, open a workspace, run a cell
 - [Connect to an external Jupyter server](/troubleshooting/connect-external-jupyter) — manual server setup
-- [CLI reference](/configuration/cli-reference) — flags, `orion config`, and uninstall
+- [CLI reference](/configuration/cli-reference) — flags, updates, `orion config`, and uninstall
 
 ## More detail
 

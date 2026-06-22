@@ -87,9 +87,19 @@ python -m pip install -U jupyter_server ipykernel orion-ui
 
 The **pip** launcher does not include `config` or `--pick-python`; it falls back to managed Jupyter when system Jupyter is incompatible.
 
+## `orion update`
+
+Check the package registry for the latest stable Orion release and install it with the package manager used for the current installation:
+
+```bash
+orion update
+```
+
+Run `orion` again after the update finishes. You can also check and install updates from the Orion menu or the bottom of the **Settings** sidebar while Orion is running.
+
 ## `orion uninstall`
 
-Remove cached Orion data before uninstalling the package:
+Remove cached Orion data and uninstall detected `orion-notebook` packages:
 
 ```bash
 orion uninstall --yes
@@ -102,13 +112,7 @@ orion uninstall --all --yes
 | `--all` | Remove entire `~/.orion` directory (venv, portable Node, all caches) |
 | `-y`, `--yes` | Skip confirmation prompts |
 
-Then remove the package:
-
-```bash
-npm uninstall -g orion-notebook
-# or
-pip uninstall orion-notebook
-```
+Orion checks npm, pip, and uv installations. When it is currently running from the package being removed, it schedules that package removal to finish after the command exits.
 
 ## Managed installer vs npm vs pip
 
