@@ -347,6 +347,10 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/troubleshooting/" },
           {
+            text: "Desktop install security warnings",
+            link: "/troubleshooting/desktop-install-security-warnings",
+          },
+          {
             text: "First-run native modules error",
             link: "/troubleshooting/first-run-native-modules-error",
           },

@@ -6,6 +6,7 @@ Fix-first guides for common Orion setup and notebook issues.
 
 | Problem | Guide |
 | --- | --- |
+| macOS or Windows blocks the desktop installer | [Desktop install security warnings](/troubleshooting/desktop-install-security-warnings) |
 | First run fails with `MODULE_NOT_FOUND` / `ensure-native-modules` | [Fix: first-run native modules error](/troubleshooting/first-run-native-modules-error) |
 | Connect Orion to your own Jupyter server | [Connect to an external Jupyter server](/troubleshooting/connect-external-jupyter) |
 | Browser blocks connection / CORS errors | [Fix Jupyter CORS connection errors](/troubleshooting/jupyter-cors-connection-failed) |

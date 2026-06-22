@@ -13,6 +13,8 @@ Download the current desktop installer from the [Orion releases page](https://gi
 
 The desktop app includes the runtimes Orion needs. It checks for updates automatically and lets you choose when to restart and install them.
 
+If macOS or Windows shows a security warning when you open the installer, you can still run Orion safely. See [Why macOS and Windows warn about the Orion desktop app](/troubleshooting/desktop-install-security-warnings).
+
 ## Install script
 
 **macOS / Linux:**
