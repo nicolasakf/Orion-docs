@@ -24,9 +24,14 @@ npm run preview
 
 1. Create a new Vercel project rooted at this directory (`Orion-docs`).
 2. Set the production domain to `docs.orion-agent.ai`.
-3. Vercel reads `vercel.json` for build settings (`npm run build` → `docs/.vitepress/dist`).
+3. Vercel reads `vercel.json` for build settings (`npm run build` → `docs/.vitepress/dist`) and rewrites extensionless paths to their `.html` files so shared links work on direct load.
 
 No environment variables are required.
+
+## Linking to docs
+
+- **Inside Orion-docs markdown**, use VitePress-relative paths (for example `/getting-started/install`).
+- **From other repos** (Orion-app, Orion-website, skills, README), use full URLs with a **`.html`** suffix (for example `https://docs.orion-agent.ai/getting-started/install.html`), or the `orionUserDocsPage()` / `orionDocsPage()` helpers in those codebases.
 
 ## Adding articles
 
