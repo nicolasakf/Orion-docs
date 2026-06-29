@@ -2,7 +2,7 @@
 
 Orion stores preferences in JSON files. **User settings** apply on your machine everywhere you use Orion; **workspace settings** override them for one project.
 
-**API keys and OAuth tokens are never stored in these files** — they live in browser storage only.
+**API keys and OAuth tokens are never stored in settings files.** Local Orion stores provider credentials separately in `~/.orion/credentials.json` (Windows: `%USERPROFILE%\.orion\credentials.json`).
 
 ## When you need this
 
@@ -106,7 +106,7 @@ Workspace files may also use `"settings"` instead of `"overrides"` for compatibi
 | `workspace` | Pinned folder paths in the workspace picker (max 50) |
 | `agent` | Assistant context compaction, tool output limits, terminal/search/filesystem/web tool behavior (advanced; JSON only today) |
 | `shell` | Panel layout, sidebar tabs, chat code-block display, mobile breakpoint (advanced; JSON only today) |
-| `providers` | Placeholder in JSON only — real credentials stay in the browser |
+| `providers` | Safe credential summaries and added provider ids only — real credentials stay in `credentials.json` |
 
 ## Common overrides
 

@@ -43,7 +43,7 @@ The CLI starts Jupyter and opens Orion already connected. You should see step 1 
    http://127.0.0.1:8888/?token=0123456789abcdef
    ```
 
-4. In Orion, click the **kernel selector** in the toolbar and paste the URL to connect.
+4. In Orion, click the **kernel selector** in the toolbar and paste the URL to connect. If you paste a base URL and token separately, Orion combines them for you.
 
 For more detail, see [Connect to an external Jupyter server](/troubleshooting/connect-external-jupyter).
 
@@ -87,4 +87,4 @@ Use `@` to attach files, cells, or variables to your message. Press **I** with a
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

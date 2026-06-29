@@ -314,6 +314,10 @@ export default defineConfig({
                 text: "Chat history",
                 link: "/ai-assistant/builtin-skills/chat-history",
               },
+              {
+                text: "Deep EDA",
+                link: "/ai-assistant/builtin-skills/deep-eda",
+              },
             ],
           },
           { text: "Sub-agents", link: "/ai-assistant/sub-agents" },

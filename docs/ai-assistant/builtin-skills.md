@@ -1,6 +1,6 @@
 # Built-in skills
 
-Orion ships with **built-in skills** — instruction packages the assistant can load automatically or on demand with **`/skill-name`**. They teach the agent Orion-specific workflows: notebook UI, App View layouts, settings, metadata, sub-agents, custom skills, workspace rules, and chat history search.
+Orion ships with **built-in skills** — instruction packages the assistant can load automatically or on demand with **`/skill-name`**. They teach the agent Orion-specific workflows: notebook UI, App View layouts, settings, metadata, sub-agents, custom skills, workspace rules, deep exploratory data analysis, and chat history search.
 
 This page is the hub. Each built-in skill has a **longer user guide** linked below with examples, file locations, and troubleshooting. Workspace skills with the **same name** override the built-in copy.
 
@@ -16,6 +16,7 @@ This page is the hub. Each built-in skill has a **longer user guide** linked bel
 | [Orion metadata](/ai-assistant/builtin-skills/orion-metadata) | `/orion-metadata` | Valid keys under `metadata.orion` in notebooks |
 | [Orion settings](/ai-assistant/builtin-skills/orion-settings) | `/orion-settings` | Read or change user and workspace settings JSON |
 | [Chat history](/ai-assistant/builtin-skills/chat-history) | `/chat-history` | Search and summarize past Orion chats stored locally |
+| [Deep EDA](/ai-assistant/builtin-skills/deep-eda) | `/deep-eda` | Run an exhaustive exploratory data analysis in the active notebook |
 
 ## How built-in skills load
 
@@ -53,6 +54,7 @@ You do not need to memorize skill names. Plain-language requests work:
 - "Add our TypeScript conventions to AGENTS.md" → loads **create-rule**
 - "Add sliders to this notebook" → loads **orion-ui**
 - "Turn this notebook into a dashboard" → loads **create-app** (and often **orion-ui**)
+- "Run a thorough EDA on this dataset" → loads **deep-eda**
 - "What did we decide about the data pipeline last week?" → loads **chat-history**
 - "Pin Gemini as the default model for this repo" → loads **orion-settings**
 
@@ -66,4 +68,4 @@ If a skill does not appear in the slash palette after you add workspace files, r
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

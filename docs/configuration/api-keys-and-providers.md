@@ -2,7 +2,7 @@
 
 Orion uses **bring your own key** (BYOK) for cloud models and supports local inference. Configure providers in **Settings → Providers**.
 
-Credentials are stored **in your browser only**. They are not written to `settings.json` on disk.
+Local Orion stores provider credentials in `~/.orion/credentials.json` (Windows: `%USERPROFILE%\.orion\credentials.json`). They are not written to `settings.json` or workspace settings files.
 
 ## Open Settings → Providers
 
@@ -36,6 +36,7 @@ If the consent screen shows a disabled **Continue** button, enable **Device code
 ## Security notes
 
 - Do not put API keys in `~/.orion/settings.json` or workspace settings files.
+- Protect `~/.orion/credentials.json` (Windows: `%USERPROFILE%\.orion\credentials.json`) like any other secrets file.
 - Jupyter tokens used to connect Orion to a server are separate from LLM provider credentials.
 - Revoke keys in your provider's dashboard if you suspect exposure.
 
@@ -54,4 +55,4 @@ See [Models and tool approval](/configuration/models-and-tool-approval).
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

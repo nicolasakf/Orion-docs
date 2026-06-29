@@ -1,6 +1,6 @@
 # Advanced settings keys (JSON)
 
-This page describes Orion settings keys that are **stored in JSON** but are **not** exposed in the Settings UI yet. Use them in `~/.orion/settings.json` or `<workspace>/.orion/settings.json` when you need fine-grained control.
+This page describes Orion settings keys that are stored in JSON and are useful for fine-grained control. Some are available in the Settings UI; others are JSON-only. Use them in `~/.orion/settings.json` or `<workspace>/.orion/settings.json` when you need project-specific defaults or values the UI does not expose yet.
 
 For file paths, merge order, and safe editing, start with [Workspace settings](/configuration/workspace-settings). You can also load **`/orion-settings`** in chat and ask the assistant to change specific keys.
 
@@ -14,7 +14,7 @@ For file paths, merge order, and safe editing, start with [Workspace settings](/
 
 - Values must match the types and ranges below. Invalid JSON may fail to load; partial workspace files are merged with defaults.
 - Changing `agent.filesystem.blockedBashCommandPatterns` affects Ask-mode shell safety — use valid regular-expression sources only.
-- Most users should change `chat`, `editor`, and `notebook.presentationHideAllCellInputs` through the UI or simple overrides first.
+- Most users should change `chat`, `editor`, empty editor shortcuts, and `notebook.presentationHideAllCellInputs` through the UI or simple overrides first.
 
 ## `chat.communicationStyle`
 
@@ -68,6 +68,33 @@ Example workspace override:
 | Key | Type | Default | Description |
 | --- | --- | --- | --- |
 | `doublePressTimeoutMs` | integer | `400` | Window for double-key shortcuts (ms) |
+
+## `editor.emptyEditor`
+
+Controls the two shortcut cards shown when no file is open in the editor.
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `leftCard` | `recent_files`, `pinned_files`, or `pinned_workspaces` | `recent_files` | Content shown in the left empty-editor card |
+| `rightCard` | `recent_files`, `pinned_files`, or `pinned_workspaces` | `pinned_files` | Content shown in the right empty-editor card |
+| `maxItems` | integer 1–20 | `5` | Maximum entries shown per card |
+
+Example workspace override:
+
+```json
+{
+  "version": 1,
+  "overrides": {
+    "editor": {
+      "emptyEditor": {
+        "leftCard": "pinned_workspaces",
+        "rightCard": "recent_files",
+        "maxItems": 8
+      }
+    }
+  }
+}
+```
 
 ## `agent.context`
 

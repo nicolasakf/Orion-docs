@@ -37,7 +37,7 @@ Orion needs a running **Jupyter Server** (1.x or 2.x) with the APIs for kernels,
 4. In Orion, open the **kernel selector** in the toolbar.
 5. Paste the URL and connect.
 
-Orion saves successful connections for next time.
+If you paste a base URL and token separately, Orion adds the token to the connection URL for you. Orion saves successful connections for next time.
 
 ## CLI alternatives
 
@@ -89,4 +89,4 @@ Skills under `.agents/skills` or `.orion/skills` may not load until Jupyter allo
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*
