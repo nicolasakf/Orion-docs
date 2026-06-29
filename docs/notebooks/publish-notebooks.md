@@ -16,9 +16,7 @@ Publish a notebook from local Orion to a shareable Orion Cloud page at `https://
 
 To create an account, switch to **I don't have an account**, fill in your name and role, then confirm the email link Supabase sends before signing in.
 
-After sign-in, the menu shows your email under **Orion Cloud**. Open **Settings** and choose **Account** to update your profile, change your password, or sign out.
-
-Forgot your password? On the sign-in form, choose **Forgot password?** and follow the reset link in your email. The link opens Orion's password reset page in your browser.
+After sign-in, the menu shows your email under **Orion Cloud**. Open **Settings** and choose **Account** to update your profile or sign out.
 
 ## Publish a notebook
 

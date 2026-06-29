@@ -46,7 +46,7 @@ Both local and hosted Orion need a **Jupyter server** to execute notebooks:
 
 ## Credentials and settings
 
-- **API keys** are entered in **Settings → Providers** and stored in your browser, not in settings JSON files on disk.
+- **API keys** are entered in **Settings → Providers** and stored in `~/.orion/credentials.json` (Windows: `%USERPROFILE%\.orion\credentials.json`) for local Orion, not in settings JSON files.
 - **User settings** (theme, pinned models, editor preferences) live in `~/.orion/settings.json` on the machine running the Orion app.
 - **Workspace settings** can override user settings per project in `<workspace>/.orion/settings.json`. See [Workspace settings](/configuration/workspace-settings).
 

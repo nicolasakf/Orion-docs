@@ -58,13 +58,22 @@ Workspace files are read through Jupyter's ContentsManager, so they live in the 
       "wordWrap": "off",
       "minimapEnabled": false,
       "tabSize": 2,
-      "insertSpaces": true
+      "insertSpaces": true,
+      "unopenableFileAction": "mention_in_chat",
+      "emptyEditor": {
+        "leftCard": "recent_files",
+        "rightCard": "pinned_files",
+        "maxItems": 5
+      }
     },
     "notebook": {
       "scrollbarVisible": true,
       "presentationHideAllCellInputs": false
     },
-    "workspace": { "pinnedDirectoryPaths": [] },
+    "workspace": {
+      "pinnedDirectoryPaths": [],
+      "pinnedFilePaths": []
+    },
     "providers": { "credentials": {} }
   }
 }
@@ -96,11 +105,11 @@ Workspace files may also use `"settings"` instead of `"overrides"` for compatibi
 | `chat.pinnedModelIds` | Models shown pinned in the picker |
 | `chat.fontSize` | Chat UI font size (10–20) |
 | `chat.communicationStyle` | `default`, `narrative`, `friendly`, `pragmatic` |
-| `editor.*` | Font size, word wrap, minimap, tab size |
+| `editor.*` | Font size, word wrap, minimap, tab size, unsupported-file behavior, empty-editor shortcuts |
 | `notebook.presentationHideAllCellInputs` | Hide inputs in presentation-style notebooks |
 | `notebook.scrollbarVisible` | Notebook scrollbar visibility |
 | `notebook.output`, `notebook.export`, `notebook.editor` | Plot/output UI, export font, editor shortcuts (see advanced doc) |
-| `workspace.pinnedDirectoryPaths` | Quick-access folders (max 50) |
+| `workspace.pinnedDirectoryPaths` / `workspace.pinnedFilePaths` | Quick-access folders and files (max 50 each) |
 | `fileTree.fontSize` | File tree font size |
 | `agent.*` | Context compaction, tool limits, terminal/search/filesystem/web (advanced) |
 | `shell.*` | Panels, sidebar, chat chrome (advanced) |
@@ -109,7 +118,7 @@ See [Workspace settings](/configuration/workspace-settings) and [Advanced settin
 
 ## Security: no secrets in JSON
 
-**API keys, OAuth tokens, and Jupyter tokens are never stored in settings files.** They live in browser storage only.
+**API keys, OAuth tokens, and Jupyter tokens are never stored in settings files.** Local Orion stores provider credentials in `~/.orion/credentials.json` (Windows: `%USERPROFILE%\.orion\credentials.json`).
 
 Do not ask the assistant to write `providers.credentials` into `settings.json`. If an old file contains credentials, remove them and configure providers through **Settings → API keys and providers**.
 

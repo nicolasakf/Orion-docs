@@ -58,6 +58,14 @@ Plotly rendering notes: [Plotly version compatibility](/troubleshooting/plotly-v
 
 Toggle **Notebook view** and **App View** from the toolbar. See [App View](/notebooks/app-view) and [Export notebooks](/notebooks/export-notebooks).
 
+## Opening files
+
+When no file is open, Orion shows shortcut cards for recent files, pinned files, or pinned workspaces. Change the card contents in **Settings → Appearance → Empty editor**.
+
+If a file is too large to open comfortably in the editor, Orion warns before loading it. Choose **Open anyway** only when you expect the editor to handle the file size, or cancel and mention the file in chat instead.
+
+For files Orion cannot open directly, **Settings → Appearance → Unsupported files** controls whether clicking the file mentions it in chat or opens it with your system's default app.
+
 ## Related
 
 - [Your first session](/getting-started/first-session)
@@ -66,4 +74,4 @@ Toggle **Notebook view** and **App View** from the toolbar. See [App View](/note
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

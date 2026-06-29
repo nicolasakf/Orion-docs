@@ -16,7 +16,7 @@ General-purpose coding agents often guess at column names or miss what your last
 
 ## Local-first and bring your own keys
 
-The open-source Orion app runs on your machine. You add API keys in **Settings → Providers** (or connect local inference). Credentials stay in your browser—they are not written to settings files on disk.
+The open-source Orion app runs on your machine. You add API keys in **Settings → Providers** (or connect local inference). Local provider credentials are stored in your Orion home directory, not in settings files.
 
 Managed data lives under:
 
@@ -57,4 +57,4 @@ Orion gives you three complementary surfaces:
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

@@ -22,6 +22,7 @@ Common paths inside:
 | `app/<version>` | Downloaded app bundle (pip installs) |
 | `orion.db` | Local chat history |
 | `settings.json` | User settings (no API keys) |
+| `credentials.json` | Local provider API keys and OAuth tokens |
 
 ## Main command
 
@@ -67,6 +68,8 @@ orion doctor --setup --json
 ```
 
 Use `--setup` to run first-run setup checks without opening the browser. This may download the app bundle, portable Node, or managed Jupyter runtime if they are missing. Use `--json` for CI and support reports.
+
+If Orion already downloaded a portable Node runtime under `runtime/node/`, later runs reuse it before asking to download Node again.
 
 ## `orion config`
 

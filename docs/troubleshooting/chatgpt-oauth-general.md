@@ -20,7 +20,7 @@ For the specific **device code authorization** error, see [Enable device code au
 
 ## Notes
 
-- ChatGPT OAuth credentials stay in **browser storage** only—not in `settings.json`.
+- ChatGPT OAuth credentials stay in `~/.orion/credentials.json` (Windows: `%USERPROFILE%\.orion\credentials.json`) for local Orion, not in `settings.json`.
 - OpenAI may change consent screen labels over time; search settings for **Codex** or **device** if menu paths differ.
 
 ## Related
@@ -30,4 +30,4 @@ For the specific **device code authorization** error, see [Enable device code au
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

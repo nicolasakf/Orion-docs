@@ -47,13 +47,22 @@ User files must include `"version": 1` and a full `"settings"` object. If you om
       "wordWrap": "off",
       "minimapEnabled": false,
       "tabSize": 2,
-      "insertSpaces": true
+      "insertSpaces": true,
+      "unopenableFileAction": "mention_in_chat",
+      "emptyEditor": {
+        "leftCard": "recent_files",
+        "rightCard": "pinned_files",
+        "maxItems": 5
+      }
     },
     "notebook": {
       "scrollbarVisible": true,
       "presentationHideAllCellInputs": false
     },
-    "workspace": { "pinnedDirectoryPaths": [] },
+    "workspace": {
+      "pinnedDirectoryPaths": [],
+      "pinnedFilePaths": []
+    },
     "providers": { "credentials": {} }
   }
 }
@@ -101,9 +110,9 @@ Workspace files may also use `"settings"` instead of `"overrides"` for compatibi
 | `appearance` | App theme: `light`, `dark`, or `system` |
 | `chat` | Title-generation model, tool approval (`always_ask` / `auto_run`), pinned models, chat font size (10–20), agent communication style |
 | `fileTree` | Left sidebar file list font size (10–20) |
-| `editor` | Code/markdown editor font size (10–28), word wrap, minimap, tab size, spaces vs tabs |
+| `editor` | Code/markdown editor font size (10–28), word wrap, minimap, tab size, spaces vs tabs, unsupported-file behavior, empty-editor shortcut cards |
 | `notebook` | Scrollbar, presentation mode (hide cell inputs), plus output/plot/export/editor tuning (see advanced doc) |
-| `workspace` | Pinned folder paths in the workspace picker (max 50) |
+| `workspace` | Pinned folder paths and pinned file paths (max 50 each) |
 | `agent` | Assistant context compaction, tool output limits, terminal/search/filesystem/web tool behavior (advanced; JSON only today) |
 | `shell` | Panel layout, sidebar tabs, chat code-block display, mobile breakpoint (advanced; JSON only today) |
 | `providers` | Safe credential summaries and added provider ids only — real credentials stay in `credentials.json` |
@@ -117,6 +126,8 @@ Workspace files may also use `"settings"` instead of `"overrides"` for compatibi
 | Auto-run tools in a sandbox repo | `overrides.chat.toolApprovalMode` → `"auto_run"` |
 | Hide all cell inputs in presentations | `overrides.notebook.presentationHideAllCellInputs` |
 | Pin frequently opened folders | `overrides.workspace.pinnedDirectoryPaths` |
+| Pin frequently opened files | `overrides.workspace.pinnedFilePaths` |
+| Change empty-editor shortcut cards | `overrides.editor.emptyEditor.leftCard` / `rightCard` |
 | Friendlier agent tone | `overrides.chat.communicationStyle` → `"friendly"` |
 | Stricter grep result cap for a huge repo | `overrides.agent.search.maxMatches` |
 

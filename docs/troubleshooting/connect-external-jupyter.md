@@ -37,7 +37,7 @@ Orion needs a running **Jupyter Server** (1.x or 2.x) with the APIs for kernels,
 4. In Orion, open the **kernel selector** in the toolbar.
 5. Paste the URL and connect.
 
-If you paste a base URL and token separately, Orion adds the token to the connection URL for you. Orion saves successful connections for next time.
+If you paste a base URL and token separately, Orion adds the token to the connection URL for you. Saved token-based URLs are shown as one full URL in the picker, so you can reconnect without copying the token into a separate field.
 
 ## CLI alternatives
 

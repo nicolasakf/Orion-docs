@@ -73,6 +73,13 @@ Example workspace override:
 
 Controls the two shortcut cards shown when no file is open in the editor.
 
+Set `editor.unopenableFileAction` to choose what happens when you click a file Orion cannot open in the editor:
+
+| Value | Effect |
+| --- | --- |
+| `mention_in_chat` | Add the file as a chat mention so the assistant can inspect or summarize it |
+| `open_externally` | Open the file with your system's default app |
+
 | Key | Type | Default | Description |
 | --- | --- | --- | --- |
 | `leftCard` | `recent_files`, `pinned_files`, or `pinned_workspaces` | `recent_files` | Content shown in the left empty-editor card |
@@ -86,6 +93,7 @@ Example workspace override:
   "version": 1,
   "overrides": {
     "editor": {
+      "unopenableFileAction": "open_externally",
       "emptyEditor": {
         "leftCard": "pinned_workspaces",
         "rightCard": "recent_files",
