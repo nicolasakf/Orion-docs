@@ -166,12 +166,19 @@ Hide all cell inputs for slide-style notebooks:
 3. Keep `"version": 1` — invalid JSON may prevent settings from loading.
 4. The assistant preserves unrelated keys when merging partial updates.
 
+## Automatic backup and recovery
+
+Orion saves a timestamped copy of **user settings** to `~/.orion/settings-backup/` (Windows: `%USERPROFILE%\.orion\settings-backup\`) before each overwrite of `settings.json`. Orion keeps up to 30 backups. Workspace overrides in project `.orion/settings.json` are not backed up.
+
+To undo a bad edit, load **`/orion-settings`** and ask to restore from backup, or follow [Restore user settings from backup](/troubleshooting/restore-user-settings-from-backup). After any filesystem restore, refresh the Orion window so the UI reloads settings.
+
 ## Related
 
 - [Workspace settings](/configuration/workspace-settings)
 - [Advanced settings keys](/configuration/settings-json-advanced-keys)
 - [API keys and providers](/configuration/api-keys-and-providers)
 - [Models and tool approval](/configuration/models-and-tool-approval)
+- [Restore user settings from backup](/troubleshooting/restore-user-settings-from-backup)
 - [Built-in skills hub](/ai-assistant/builtin-skills)
 
 ---

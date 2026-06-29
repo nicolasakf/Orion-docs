@@ -388,6 +388,10 @@ export default defineConfig({
           },
           { text: "PDF export blocked", link: "/troubleshooting/pdf-export-blocked" },
           {
+            text: "Restore user settings from backup",
+            link: "/troubleshooting/restore-user-settings-from-backup",
+          },
+          {
             text: "Orion Cloud publish and import",
             link: "/troubleshooting/orion-cloud-publish-and-import",
           },

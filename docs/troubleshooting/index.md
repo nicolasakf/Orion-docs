@@ -23,6 +23,12 @@ Fix-first guides for common Orion setup and notebook issues.
 | PDF export fails immediately | [Fix: PDF export blocked](/troubleshooting/pdf-export-blocked) |
 | Orion Cloud publish or **Open in Orion** import fails | [Fix Orion Cloud publish and import issues](/troubleshooting/orion-cloud-publish-and-import) |
 
+## Settings
+
+| Problem | Guide |
+| --- | --- |
+| Bad edit to user settings JSON; need to undo | [Restore user settings from backup](/troubleshooting/restore-user-settings-from-backup) |
+
 ## Providers and auth
 
 | Problem | Guide |
