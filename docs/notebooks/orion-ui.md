@@ -1,6 +1,6 @@
 # Orion UI (`orion_ui`)
 
-Orion UI lets you build interactive notebook controls—sliders, selects, buttons, cards—in Python. Outputs render as native Orion components in Notebook view and App View.
+Orion UI lets you build interactive notebook controls and displays, including sliders, selects, buttons, cards, and DataFrame tables, in Python. Outputs render as native Orion components in Notebook view and App View.
 
 The **`/orion-ui`** built-in skill teaches the assistant this workflow. Extended guide: [Built-in skill: Orion UI](/ai-assistant/builtin-skills/orion-ui).
 
@@ -82,6 +82,33 @@ Use Plotly, Altair, Vega-Lite, or your usual plotting libraries for charts. For 
 
 Plotly version mismatches with the bundled renderer are covered in [Plotly version compatibility](/troubleshooting/plotly-version-compatibility).
 
+## DataFrame tables
+
+Use `ui.table()` when you want to inspect a pandas DataFrame without sending the full data set to the browser. Orion loads a bounded page or scroll window, then sends filtering, search, sorting, grouping, stats, and export requests back to the Python kernel.
+
+```python
+import pandas as pd
+import orion_ui as ui
+
+df = pd.read_csv("orders.csv")
+
+ui.table(
+    df,
+    source="df",
+    page_size=50,
+)
+```
+
+The `source` argument is required. Use the Python expression that names or recreates the DataFrame, such as `"df"` or `"orders_df"`. Orion uses it when saving table views so the output metadata can include readable pandas expressions for filters and sorts.
+
+For very large DataFrames, keep the default `mode="paginated"` or use `mode="virtual"` when you prefer scrolling through windows:
+
+```python
+ui.table(df, source="df", mode="virtual", page_size=100)
+```
+
+The first version supports pandas DataFrames only. To use a Polars table or another DataFrame object, convert it to pandas before passing it to `ui.table()`.
+
 ## App View integration
 
 1. Create interactive UI in a code cell with `orion_ui`.
@@ -109,4 +136,4 @@ The Orion repository includes `public/test-files/orion_ui_sample.ipynb` demonstr
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*

@@ -245,6 +245,10 @@ export default defineConfig({
                     text: "ui.output",
                     link: "/notebooks/orion-ui-component-reference#ui-output-cell-id-output-index-0-class-name-none",
                   },
+                  {
+                    text: "ui.table",
+                    link: "/notebooks/orion-ui-component-reference#ui-table-dataframe-source-title-none-mode-paginated-page-size-50-show-index-true-max-cell-chars-200-class-name-none",
+                  },
                 ],
               },
               {

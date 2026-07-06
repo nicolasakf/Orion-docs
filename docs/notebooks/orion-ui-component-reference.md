@@ -389,6 +389,42 @@ Embed another cell's rendered output.
 | `output_index` | `int` — zero-based index into that cell's outputs | `0` |
 | `class_name` | See styling hook | `None` |
 
+### `ui.table(dataframe, source, mode="paginated", page_size=50, show_index=True, max_cell_chars=200, class_name=None)`
+
+Interactive table for a pandas DataFrame. Orion keeps the full DataFrame in the Python kernel and sends only bounded row windows to the browser.
+
+| Parameter | Allowed values / type | Default |
+| --- | --- | --- |
+| `dataframe` | `pandas.DataFrame` | — |
+| `source` | required keyword-only `str` — Python expression that references or recreates the DataFrame, for example `"df"` | — |
+| `mode` | `"paginated"` or `"virtual"` | `"paginated"` |
+| `page_size` | positive `int`; Orion caps very large values for safety | `50` |
+| `show_index` | `bool` — show the DataFrame index as the first column | `True` |
+| `max_cell_chars` | `int` — maximum characters sent for one non-scalar cell | `200` |
+| `class_name` | See styling hook | `None` |
+
+Example:
+
+```python
+import pandas as pd
+import orion_ui as ui
+
+df = pd.read_csv("orders.csv")
+
+ui.table(
+    df,
+    source="df",
+)
+```
+
+Use `mode="paginated"` for page controls or `mode="virtual"` for scroll-window loading:
+
+```python
+ui.table(df, source="df", mode="virtual", page_size=100)
+```
+
+Table filters, search, sorting, grouping, stats, and CSV export run in Python. Saved views are stored in the notebook output metadata with structured operations and a readable pandas expression based on `source`.
+
 ---
 
 ## State API
@@ -437,4 +473,4 @@ Use Plotly, Altair, Vega-Lite, or your usual plotting libraries for charts. Orio
 
 ---
 
-*Last updated May 2026.*
+*Last updated June 2026.*
