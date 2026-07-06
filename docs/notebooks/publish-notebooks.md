@@ -6,6 +6,7 @@ Publish a notebook from local Orion to a shareable Orion Cloud page at `https://
 
 - Share a dashboard or notebook with teammates or clients.
 - Publish from **Notebook view** or **App View** (Orion captures whichever view is visible).
+- Add an optional password when the link should be limited to people who know it.
 - Let signed-in viewers import the source `.ipynb` into local Orion when you enable that option.
 
 ## Sign in to Orion Cloud
@@ -26,14 +27,17 @@ After sign-in, the menu shows your email under **Orion Cloud**. Open **Settings*
 4. Sign in if prompted.
 5. Set **Title** and **Description**.
 6. Review **Hide input cells in published page** (on by default). When checked, code inputs are hidden in the published snapshot, similar to a presentation export. The uploaded source `.ipynb` still contains full cells when download is enabled.
-7. Optionally check **Allow viewers to download the source .ipynb**. Required for the **Open in Orion** import flow.
-8. Click **Publish**.
+7. To require a password before viewers can open the link, enter it in **Password**. Leave the field blank for a public link.
+8. Optionally check **Allow viewers to download the source .ipynb**. Required for the **Open in Orion** import flow.
+9. Click **Publish**.
 
 Orion saves pending cell edits, uploads the notebook bundle, and shows a share link. Use **Copy link** or **Open** to view the published page.
 
 ## Update an existing publication
 
 If you have published notebooks before, the publish dialog lists them under **Publish target**. Choose **Update: …** to replace an existing page instead of creating a new one. Title, description, and download settings are prefilled from the selected publication.
+
+When the selected publication already has a password, the dialog shows **Change password**. Leave that field blank to keep the current password, or enter a new password to replace it.
 
 ## Notebook view vs App View
 
@@ -46,7 +50,7 @@ Switch views before publishing if you need a specific presentation.
 
 ## What viewers see
 
-The share link opens a hosted HTML page captured at publish time. Viewers can scroll and interact with rendered outputs (charts, Orion UI widgets, and so on), but **no Python kernel runs** on Orion's servers. Buttons or controls that would execute notebook code show a message that execution is not available in published views.
+The share link opens a hosted HTML page captured at publish time. Password-protected links ask viewers for the password before showing the notebook. Orion Cloud stores the password separately from the published notebook bundle; it is not embedded in the public `.ipynb` or HTML snapshot. Viewers can scroll and interact with rendered outputs (charts, Orion UI widgets, and so on), but **no Python kernel runs** on Orion's servers. Buttons or controls that would execute notebook code show a message that execution is not available in published views.
 
 If you enabled source download, a fixed **Open in Orion** button appears in the top-right corner of the published page.
 
