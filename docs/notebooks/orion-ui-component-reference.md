@@ -389,7 +389,7 @@ Embed another cell's rendered output.
 | `output_index` | `int` — zero-based index into that cell's outputs | `0` |
 | `class_name` | See styling hook | `None` |
 
-### `ui.table(dataframe, source, mode="paginated", page_size=50, show_index=True, max_cell_chars=200, column_descriptions=None, class_name=None)`
+### `ui.table(dataframe, source, title=None, mode="paginated", page_size=50, show_index=True, max_cell_chars=200, column_descriptions=None, class_name=None)`
 
 Interactive table for a pandas DataFrame. Orion keeps the full DataFrame in the Python kernel and sends only bounded row windows to the browser.
 
@@ -397,6 +397,7 @@ Interactive table for a pandas DataFrame. Orion keeps the full DataFrame in the 
 | --- | --- | --- |
 | `dataframe` | `pandas.DataFrame` | — |
 | `source` | required keyword-only `str` — Python expression that references or recreates the DataFrame, for example `"df"` | — |
+| `title` | `str` or `None` — heading shown above the table | `None` |
 | `mode` | `"paginated"` or `"virtual"` | `"paginated"` |
 | `page_size` | positive `int`; Orion caps very large values for safety | `50` |
 | `show_index` | `bool` — show the DataFrame index as the first column | `True` |
@@ -415,6 +416,7 @@ df = pd.read_csv("orders.csv")
 ui.table(
     df,
     source="df",
+    title="Orders",
     column_descriptions={
         "order_total": "Total order value after discounts",
         "region": "Sales territory for the customer account",

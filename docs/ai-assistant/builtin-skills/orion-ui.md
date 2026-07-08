@@ -86,7 +86,7 @@ model = ui.get("model")
 
 **Display:** `ui.label`, `ui.badge`, `ui.alert`, `ui.progress`, `ui.avatar`, `ui.popover`, `ui.hover_card`, `ui.tooltip`, `ui.markdown_cell`, `ui.output`, `ui.table`
 
-`ui.table()` supports pandas DataFrames with optional `column_descriptions` for readable table header info-icon tooltips.
+`ui.table()` supports pandas DataFrames with optional `title` and `column_descriptions` for readable table headings and info-icon tooltips.
 
 Optional `class_name="..."` on any component; define matching selectors in `metadata.orion.appView.css`.
 
