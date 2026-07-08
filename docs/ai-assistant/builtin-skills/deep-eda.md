@@ -1,8 +1,8 @@
 # Built-in skill: Deep EDA
 
-The **deep-eda** built-in skill runs a thorough exploratory data analysis in your active notebook. Use it when you want Orion to inspect a dataset deeply, build evidence with code and plots, and keep going until the analysis has a clear synthesis.
+The **deep-eda** built-in skill starts Orion's beta **Research** mode with an exploratory data analysis profile. Use it when you want Orion to inspect a dataset deeply, build evidence with code and plots, document what it finds in the notebook, and keep going until the analysis has a clear synthesis.
 
-Load it with **`/deep-eda`** or ask for a "deep", "thorough", or "exhaustive" EDA. For quick summaries or one-off data questions, use a normal chat request instead.
+Load it with **`/deep-eda`** or ask for a "deep", "thorough", or "exhaustive" EDA. Orion switches the turn into Research mode automatically. For quick summaries or one-off data questions, use a normal chat request instead.
 
 ## When to use it
 
@@ -13,10 +13,10 @@ Load it with **`/deep-eda`** or ask for a "deep", "thorough", or "exhaustive" ED
 
 ## What Orion does
 
-1. Starts the deep EDA workflow when you explicitly ask for it.
+1. Starts a Research-mode session when you explicitly ask for deep EDA.
 2. Uses the active notebook, or creates a new notebook when needed.
 3. Adds reproducible code cells, markdown notes, statistics, and plots.
-4. Tracks open questions and evidence in an EDA ledger.
+4. Works in focused research steps instead of drafting a whole notebook up front.
 5. Visually inspects generated PNG or JPEG plots when possible.
 6. Writes final synthesis cells that cover findings, uncertainty, limitations, and useful next steps.
 
@@ -28,16 +28,17 @@ If image inspection is unavailable, Orion should say so and support conclusions 
 
 ## Finishing a run
 
-A deep EDA run is not complete just because the assistant has written a prose reply. Orion should continue until the workflow accepts completion or you stop the run.
+A deep EDA run is not complete just because the assistant has written a prose reply. Orion should continue until the Research-mode session reaches a synthesis or you stop the run.
 
 Stop the run with a direct message such as "stop the EDA" if you need to switch tasks.
 
 ## Related
 
 - [Built-in skills hub](/ai-assistant/builtin-skills)
+- [Agent, Research, Ask, and Edit modes](/ai-assistant/agent-ask-edit-modes)
 - [Notebook basics](/notebooks/notebook-basics)
 - [Orion UI (`orion_ui`)](/notebooks/orion-ui)
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

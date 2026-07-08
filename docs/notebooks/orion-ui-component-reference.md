@@ -389,7 +389,7 @@ Embed another cell's rendered output.
 | `output_index` | `int` — zero-based index into that cell's outputs | `0` |
 | `class_name` | See styling hook | `None` |
 
-### `ui.table(dataframe, source, mode="paginated", page_size=50, show_index=True, max_cell_chars=200, class_name=None)`
+### `ui.table(dataframe, source, mode="paginated", page_size=50, show_index=True, max_cell_chars=200, column_descriptions=None, class_name=None)`
 
 Interactive table for a pandas DataFrame. Orion keeps the full DataFrame in the Python kernel and sends only bounded row windows to the browser.
 
@@ -401,6 +401,7 @@ Interactive table for a pandas DataFrame. Orion keeps the full DataFrame in the 
 | `page_size` | positive `int`; Orion caps very large values for safety | `50` |
 | `show_index` | `bool` — show the DataFrame index as the first column | `True` |
 | `max_cell_chars` | `int` — maximum characters sent for one non-scalar cell | `200` |
+| `column_descriptions` | mapping of `str` to `str` or `None` — header tooltips; use `"__index__"` for the index column | `None` |
 | `class_name` | See styling hook | `None` |
 
 Example:
@@ -414,8 +415,14 @@ df = pd.read_csv("orders.csv")
 ui.table(
     df,
     source="df",
+    column_descriptions={
+        "order_total": "Total order value after discounts",
+        "region": "Sales territory for the customer account",
+    },
 )
 ```
+
+Column descriptions appear as info-icon tooltips in table headers.
 
 Use `mode="paginated"` for page controls or `mode="virtual"` for scroll-window loading:
 
@@ -473,4 +480,4 @@ Use Plotly, Altair, Vega-Lite, or your usual plotting libraries for charts. Orio
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

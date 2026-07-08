@@ -1,6 +1,6 @@
-# Agent, Ask, and Edit modes
+# Agent, Research, Ask, and Edit modes
 
-Orion's assistant can work in three **interaction modes**. Each mode controls which tools the model may use.
+Orion's assistant can work in several **interaction modes**. Each mode controls which tools the model may use.
 
 Choose the mode from the selector near the chat input before you send a message.
 
@@ -22,6 +22,12 @@ Use Agent when you want the assistant to **do work** in your project: fix bugs, 
 
 Use Ask when you want explanations, reviews, or planning without risk of edits—for example, "Explain this traceback" or "What does this function assume about the dataframe?"
 
+## Research mode (beta)
+
+**Research** uses the same tool surface as Agent mode, but it is tuned for open-ended notebook investigations. Orion gathers evidence, inspects outputs, records observations in markdown cells, and decides the next focused research step from what the notebook shows.
+
+Research mode is hidden from the chat selector by default while it is in beta. Open **Settings → Interaction Modes** to show it, or use **`/deep-eda`** when you want a thorough exploratory data analysis profile.
+
 ## Edit mode
 
 **Edit** can modify **files** and use the **terminal**, but it **does not execute notebook cells**.
@@ -33,6 +39,7 @@ Use Edit when you want code or config changes outside the notebook runtime—for
 | You want… | Mode |
 | --- | --- |
 | Run cells and iterate on analysis | **Agent** |
+| Investigate data deeply with evidence and notebook notes | **Research** |
 | Understand code or data without changes | **Ask** |
 | Edit project files without running the notebook | **Edit** |
 
@@ -49,4 +56,4 @@ In **Agent** mode, individual tool calls may still require your approval dependi
 
 ---
 
-*Last updated May 2026.*
+*Last updated July 2026.*

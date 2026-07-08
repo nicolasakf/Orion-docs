@@ -14,6 +14,8 @@ Managed files are stored under:
 
 ## Step 1 — Connect to Jupyter
 
+If Orion asks you to choose an experience first, pick **Business** for a simpler data-and-chat workspace or **Pro** for the full notebook IDE. You can change this later in **Settings -> Appearance**.
+
 Orion needs a Jupyter server to run notebooks, browse files, and use the integrated terminal.
 
 ### If you ran `orion` (recommended)
@@ -87,4 +89,4 @@ Use `@` to attach files, cells, or variables to your message. Press **I** with a
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

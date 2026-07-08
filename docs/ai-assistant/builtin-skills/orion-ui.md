@@ -84,7 +84,9 @@ model = ui.get("model")
 
 **Controls:** `ui.input`, `ui.textarea`, `ui.select`, `ui.slider`, `ui.checkbox`, `ui.switch`, `ui.radio_group`, `ui.toggle`, `ui.toggle_group`, `ui.calendar`, `ui.date_picker`, `ui.date_time_picker`, `ui.button`
 
-**Display:** `ui.label`, `ui.badge`, `ui.alert`, `ui.progress`, `ui.avatar`, `ui.popover`, `ui.hover_card`, `ui.tooltip`, `ui.markdown_cell`, `ui.output`
+**Display:** `ui.label`, `ui.badge`, `ui.alert`, `ui.progress`, `ui.avatar`, `ui.popover`, `ui.hover_card`, `ui.tooltip`, `ui.markdown_cell`, `ui.output`, `ui.table`
+
+`ui.table()` supports pandas DataFrames with optional `column_descriptions` for readable table header info-icon tooltips.
 
 Optional `class_name="..."` on any component; define matching selectors in `metadata.orion.appView.css`.
 
@@ -143,4 +145,4 @@ Sample notebook in the Orion repo: `public/test-files/orion_ui_sample.ipynb`.
 
 ---
 
-*Last updated May 2026.*
+*Last updated July 2026.*

@@ -5,6 +5,7 @@ Use this guide when publishing to Orion Cloud fails, or when **Open in Orion** d
 ## When you need this
 
 - Publish shows **Orion Cloud is not configured in this local app**.
+- Publish reports that the notebook is too large to upload.
 - **Open in Orion** does nothing, or the browser cannot reach local Orion.
 - Import stops at sign-in, Jupyter connection, or a download error.
 - The handoff page says **Source import unavailable**.
@@ -20,6 +21,19 @@ Use this guide when publishing to Orion Cloud fails, or when **Open in Orion** d
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
 
 Rebuild or reinstall after changing these values, then restart Orion.
+
+## Published notebook is too large
+
+**Symptom:** The publish dialog reports that the notebook is too large to upload.
+
+**Fix:** Reduce the size of the notebook bundle and publish again.
+
+1. Clear large outputs you do not need viewers to see.
+2. Remove or downsample embedded images, large HTML outputs, or very large table snapshots.
+3. Save the notebook.
+4. Click **Publish to Orion Cloud** again.
+
+If the notebook still needs to remain large, use [export as HTML or PDF](/notebooks/export-notebooks) and share that file instead.
 
 ## Local Orion is not running
 
@@ -93,4 +107,4 @@ See [Connect to an external Jupyter server](/troubleshooting/connect-external-ju
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

@@ -48,6 +48,12 @@ Use **@** in chat to mention a variable by name so the assistant sees live value
 
 Workspace teams can set `notebook.presentationHideAllCellInputs` in `.orion/settings.json`. See [Workspace settings](/configuration/workspace-settings).
 
+## Saving files
+
+Orion marks dirty editor tabs and shows brief save feedback after manual saves. Turn on **Settings -> Appearance -> Editor -> Autosave** to periodically save dirty files open in the editor.
+
+Autosave uses **Autosave interval** in milliseconds. The default interval is `1000` ms when autosave is enabled.
+
 ## Outputs
 
 Orion renders Plotly, Vega, HTML, images, LaTeX, GeoJSON, PDF previews, streams, errors, and **Orion UI** outputs. When multiple MIME types exist, use the output presentation picker to switch representation.
@@ -74,4 +80,4 @@ For files Orion cannot open directly, **Settings → Appearance → Unsupported 
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

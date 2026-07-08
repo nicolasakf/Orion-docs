@@ -16,15 +16,20 @@ If your chosen model is unavailable (missing API key or local server offline), O
 
 ## Interaction modes
 
-Orion supports three modes, selectable near the chat input:
+Orion supports several modes, selectable near the chat input:
 
 | Mode | Behavior |
 | --- | --- |
 | **Agent** | Full tools: notebook execution, file edits, terminal, sub-agents |
+| **Research** | Beta mode for evidence-driven, notebook-native investigations; hidden from the selector unless enabled in settings |
 | **Ask** | Read-only: inspect and explain, no changes |
 | **Edit** | Edit files and run terminal commands; does not execute notebook cells |
 
-See [Agent, Ask, and Edit modes](/ai-assistant/agent-ask-edit-modes).
+See [Agent, Research, Ask, and Edit modes](/ai-assistant/agent-ask-edit-modes).
+
+## Fork a chat
+
+Use the fork action on a past user message when you want to try a different path without losing the original conversation. Orion creates a new chat that keeps the history up to that point. If later agent turns changed files, Orion asks whether to keep your current files or restore recorded edits back to the fork point first.
 
 ## Send messages and queue
 
@@ -56,11 +61,11 @@ The assistant can search and summarize past chats when the **chat-history** buil
 
 ## Related
 
-- [Agent, Ask, and Edit modes](/ai-assistant/agent-ask-edit-modes)
+- [Agent, Research, Ask, and Edit modes](/ai-assistant/agent-ask-edit-modes)
 - [Mentions](/ai-assistant/mentions)
 - [Skills](/ai-assistant/skills)
 - [Sub-agents](/ai-assistant/sub-agents)
 
 ---
 
-*Last updated May 2026.*
+*Last updated July 2026.*

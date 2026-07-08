@@ -16,6 +16,17 @@ For file paths, merge order, and safe editing, start with [Workspace settings](/
 - Changing `agent.filesystem.blockedBashCommandPatterns` affects Ask-mode shell safety — use valid regular-expression sources only.
 - Most users should change `chat`, `editor`, empty editor shortcuts, and `notebook.presentationHideAllCellInputs` through the UI or simple overrides first.
 
+## `appearance.experienceMode`
+
+Controls the primary Orion workspace shell.
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `experienceMode` | `pro` or `business` | `business` | `pro` shows the full notebook IDE. `business` shows the simplified report-and-chat workspace. |
+| `experienceModeChosen` | boolean | `false` for new installs | Whether the first-run experience dialog has been completed. |
+
+Use **Settings → Appearance** for normal changes. See [Business mode](/getting-started/business-mode).
+
 ## `chat.communicationStyle`
 
 | Value | Effect |
@@ -72,6 +83,8 @@ Example workspace override:
 ## `editor.emptyEditor`
 
 Controls the two shortcut cards shown when no file is open in the editor.
+
+The editor also supports **Autosave** and **Autosave interval** in **Settings → Appearance**. In JSON, set `editor.autosaveEnabled` and `editor.autosaveIntervalMs` (milliseconds). Business mode autosaves dirty editor files even when `editor.autosaveEnabled` is `false`.
 
 Set `editor.unopenableFileAction` to choose what happens when you click a file Orion cannot open in the editor:
 
@@ -249,4 +262,4 @@ App chrome defaults. Session-only UI state may still override these until Orion 
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

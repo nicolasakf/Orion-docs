@@ -33,7 +33,11 @@ User files must include `"version": 1` and a full `"settings"` object. If you om
 {
   "version": 1,
   "settings": {
-    "appearance": { "theme": "system" },
+    "appearance": {
+      "theme": "system",
+      "experienceMode": "business",
+      "experienceModeChosen": true
+    },
     "chat": {
       "titleGenerationModelId": "gemini-3.1-flash-lite",
       "toolApprovalMode": "always_ask",
@@ -48,6 +52,8 @@ User files must include `"version": 1` and a full `"settings"` object. If you om
       "minimapEnabled": false,
       "tabSize": 2,
       "insertSpaces": true,
+      "autosaveEnabled": false,
+      "autosaveIntervalMs": 1000,
       "unopenableFileAction": "mention_in_chat",
       "emptyEditor": {
         "leftCard": "recent_files",
@@ -107,10 +113,10 @@ Workspace files may also use `"settings"` instead of `"overrides"` for compatibi
 
 | Section | What it controls |
 | --- | --- |
-| `appearance` | App theme: `light`, `dark`, or `system` |
+| `appearance` | App theme (`light`, `dark`, or `system`) and product experience (`business` or `pro`) |
 | `chat` | Title-generation model, tool approval (`always_ask` / `auto_run`), pinned models, chat font size (10–20), agent communication style |
 | `fileTree` | Left sidebar file list font size (10–20) |
-| `editor` | Code/markdown editor font size (10–28), word wrap, minimap, tab size, spaces vs tabs, unsupported-file behavior, empty-editor shortcut cards |
+| `editor` | Code/markdown editor font size (10–28), word wrap, minimap, tab size, spaces vs tabs, autosave, unsupported-file behavior, empty-editor shortcut cards |
 | `notebook` | Scrollbar, presentation mode (hide cell inputs), plus output/plot/export/editor tuning (see advanced doc) |
 | `workspace` | Pinned folder paths and pinned file paths (max 50 each) |
 | `agent` | Assistant context compaction, tool output limits, terminal/search/filesystem/web tool behavior (advanced; JSON only today) |
@@ -125,6 +131,7 @@ Workspace files may also use `"settings"` instead of `"overrides"` for compatibi
 | Team default pinned models | `overrides.chat.pinnedModelIds` |
 | Auto-run tools in a sandbox repo | `overrides.chat.toolApprovalMode` → `"auto_run"` |
 | Hide all cell inputs in presentations | `overrides.notebook.presentationHideAllCellInputs` |
+| Enable editor autosave | `overrides.editor.autosaveEnabled` and `overrides.editor.autosaveIntervalMs` |
 | Pin frequently opened folders | `overrides.workspace.pinnedDirectoryPaths` |
 | Pin frequently opened files | `overrides.workspace.pinnedFilePaths` |
 | Change empty-editor shortcut cards | `overrides.editor.emptyEditor.leftCard` / `rightCard` |
@@ -148,4 +155,4 @@ Workspace files may also use `"settings"` instead of `"overrides"` for compatibi
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

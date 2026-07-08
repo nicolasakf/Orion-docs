@@ -96,10 +96,16 @@ ui.table(
     df,
     source="df",
     page_size=50,
+    column_descriptions={
+        "order_total": "Total order value after discounts",
+        "region": "Sales territory for the customer account",
+    },
 )
 ```
 
 The `source` argument is required. Use the Python expression that names or recreates the DataFrame, such as `"df"` or `"orders_df"`. Orion uses it when saving table views so the output metadata can include readable pandas expressions for filters and sorts.
+
+Use `column_descriptions` when table headers need plain-language definitions. Keys should match DataFrame column names after string conversion. Use `"__index__"` to describe the index column.
 
 For very large DataFrames, keep the default `mode="paginated"` or use `mode="virtual"` when you prefer scrolling through windows:
 
@@ -136,4 +142,4 @@ The Orion repository includes `public/test-files/orion_ui_sample.ipynb` demonstr
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

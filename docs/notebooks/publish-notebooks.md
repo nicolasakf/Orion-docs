@@ -33,6 +33,8 @@ After sign-in, the menu shows your email under **Orion Cloud**. Open **Settings*
 
 Orion saves pending cell edits, uploads the notebook bundle, and shows a share link. Use **Copy link** or **Open** to view the published page.
 
+If the notebook is too large for Orion Cloud to accept, the dialog shows a clear size error before upload. Reduce the notebook size, clear large outputs you do not need to publish, or export to HTML/PDF instead.
+
 ## Update an existing publication
 
 If you have published notebooks before, the publish dialog lists them under **Publish target**. Choose **Update: …** to replace an existing page instead of creating a new one. Title, description, and download settings are prefilled from the selected publication.
@@ -91,4 +93,4 @@ See [Fix Orion Cloud publish and import issues](/troubleshooting/orion-cloud-pub
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

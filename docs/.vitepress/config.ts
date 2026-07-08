@@ -45,6 +45,7 @@ export default defineConfig({
           { text: "What is Orion?", link: "/getting-started/what-is-orion" },
           { text: "Install Orion", link: "/getting-started/install" },
           { text: "Your first session", link: "/getting-started/first-session" },
+          { text: "Business mode", link: "/getting-started/business-mode" },
           { text: "Local vs hosted app", link: "/getting-started/local-vs-hosted" },
         ],
       },
@@ -247,7 +248,7 @@ export default defineConfig({
                   },
                   {
                     text: "ui.table",
-                    link: "/notebooks/orion-ui-component-reference#ui-table-dataframe-source-title-none-mode-paginated-page-size-50-show-index-true-max-cell-chars-200-class-name-none",
+                    link: "/notebooks/orion-ui-component-reference#ui-table-dataframe-source-title-none-mode-paginated-page-size-50-show-index-true-max-cell-chars-200-column-descriptions-none-class-name-none",
                   },
                 ],
               },
@@ -286,7 +287,7 @@ export default defineConfig({
         items: [
           { text: "Chat overview", link: "/ai-assistant/chat-overview" },
           {
-            text: "Agent, Ask, and Edit modes",
+            text: "Agent, Research, Ask, and Edit modes",
             link: "/ai-assistant/agent-ask-edit-modes",
           },
           { text: "Mentions", link: "/ai-assistant/mentions" },
@@ -319,7 +320,7 @@ export default defineConfig({
                 link: "/ai-assistant/builtin-skills/chat-history",
               },
               {
-                text: "Deep EDA",
+                text: "Deep EDA research profile",
                 link: "/ai-assistant/builtin-skills/deep-eda",
               },
             ],

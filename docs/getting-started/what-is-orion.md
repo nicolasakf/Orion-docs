@@ -11,8 +11,18 @@ Orion targets workflows where **data and runtime state matter**:
 - Exploratory analysis in Jupyter notebooks
 - Iterating on charts, tables, and models until results look right
 - Research notebooks that mix code, narrative, and interactive controls
+- Business reporting where a simpler data-and-chat workspace is more useful than a full notebook IDE
 
 General-purpose coding agents often guess at column names or miss what your last cell actually produced. Orion is designed to close that **context gap** by feeding the model variable inspector state, cell outputs, and notebook structure at the right time.
+
+On first run, Orion asks you to choose an experience:
+
+| Experience | Best for |
+| --- | --- |
+| **Business** | A simpler data-and-chat-first workspace for reports, analysis, and everyday business questions |
+| **Pro** | The full notebook-first IDE with cells, code, files, terminals, and advanced notebook controls |
+
+You can change this later in **Settings -> Appearance -> Product experience**.
 
 ## Local-first and bring your own keys
 
@@ -33,13 +43,13 @@ Orion gives you three complementary surfaces:
 | --- | --- |
 | **Notebook view** | Edit and run cells, inspect outputs, use the variable inspector |
 | **App View** | A polished dashboard or report layout built from notebook content |
-| **Assistant (chat)** | Agent, Ask, or Edit modes with @ mentions, slash commands, and tools |
+| **Assistant (chat)** | Agent, Research, Ask, or Edit modes with @ mentions, slash commands, and tools |
 
 **Notebook view** is where you write Python, run analysis, and see rich outputs (Plotly, images, tables, Orion UI controls).
 
 **App View** arranges selected cells and outputs into sections, cards, and grids using declarative layout metadata. It is for presentation—not for replacing interactive Python controls. Sliders, buttons, and forms belong in [`orion_ui`](/notebooks/orion-ui) code cells; App View references those outputs.
 
-**Assistant** sits in the right sidebar. In **Agent** mode it can run cells, edit files, and use terminal tools. **Ask** mode is read-only. **Edit** mode can change files and run terminal commands but does not execute notebook cells.
+**Assistant** sits in the right sidebar. In **Agent** mode it can run cells, edit files, and use terminal tools. **Research** mode is a beta profile for open-ended analysis where Orion should inspect evidence and decide what to investigate next. **Ask** mode is read-only. **Edit** mode can change files and run terminal commands but does not execute notebook cells.
 
 ## Typical workflow
 
@@ -57,4 +67,4 @@ Orion gives you three complementary surfaces:
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*
