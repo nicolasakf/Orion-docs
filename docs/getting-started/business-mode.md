@@ -16,7 +16,7 @@ You can change the choice later from **Settings → Appearance**.
 
 - Orion opens a chat-first workspace focused on projects and reports.
 - You see App View content instead of raw notebook cells.
-- **New analysis** creates a notebook for a fresh report or question.
+- **New notebook** creates a notebook for a fresh report or question.
 - **Refresh** reruns the report and updates visible App View output.
 - **Export** creates a PDF or HTML copy of the visible report.
 - Dirty editor files autosave in Business mode, even if the general autosave setting is off.
