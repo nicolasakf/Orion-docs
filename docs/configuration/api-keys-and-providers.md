@@ -31,7 +31,11 @@ For local providers, enter the server URL (for example `http://127.0.0.1:11434` 
 
 ## ChatGPT Plus / Pro (OAuth)
 
-OpenAI supports connecting a **ChatGPT subscription** instead of a pay-per-token API key. Use **Connect ChatGPT Plus / Pro** in the OpenAI provider section.
+OpenAI supports connecting a **ChatGPT subscription** instead of a pay-per-token API key. Use **Connect ChatGPT Plus / Pro** in the OpenAI provider section, or choose **Log in with your ChatGPT account** during first-run onboarding.
+
+Orion opens ChatGPT sign-in in a pop-up window, then waits for the local callback to finish. If your browser blocks the pop-up, allow pop-ups for Orion and try again. You can cancel the sign-in from Orion while it is waiting.
+
+If browser sign-in does not complete, use **Set up manually in Settings** during onboarding or add an OpenAI API key in **Settings → Providers**.
 
 If the consent screen shows a disabled **Continue** button, enable **Device code authorization for Codex** in ChatGPT settings. See [Enable device code authorization for Codex](/troubleshooting/chatgpt-codex-device-authorization).
 
@@ -58,4 +62,4 @@ See [Models and tool approval](/configuration/models-and-tool-approval).
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*

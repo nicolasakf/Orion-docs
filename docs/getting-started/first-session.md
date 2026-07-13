@@ -1,26 +1,36 @@
 # Your first Orion session
 
-Follow these steps after [installing Orion](/getting-started/install) to connect Jupyter, open a workspace, run a notebook cell, and try the assistant.
+Follow these steps after [installing Orion](/getting-started/install) to finish onboarding, connect Jupyter, open a workspace, run a notebook cell, and try the assistant.
 
 ## Before you start
 
 - Orion is running locally (`orion` in a terminal) or you opened [app.orion-agent.ai](https://app.orion-agent.ai).
-- If you used the CLI, Orion may have already connected to its managed Jupyter server. If you see a green check on step 1 in the **Get started** card, skip to step 2.
+- If you used the CLI, Orion may have already connected to its managed Jupyter server. If you see a green check on the Jupyter step in the **Get started** card, skip the manual Jupyter connection steps.
 
 Managed files are stored under:
 
 - **macOS / Linux:** `~/.orion`
 - **Windows:** `%USERPROFILE%\.orion`
 
-## Step 1 — Connect to Jupyter
+## Step 1 — Finish first-run onboarding
 
-If Orion asks you to choose an experience first, pick **Business** for a simpler data-and-chat workspace or **Pro** for the full notebook IDE. You can change this later in **Settings -> Appearance**.
+New installs show a short onboarding flow before the workspace opens.
+
+1. On **Sign in to Orion**, sign in to Orion Cloud if you want cloud publishing and account features, or skip sign-in for now.
+2. On **Welcome to Orion**, choose **Business** for a simpler data-and-chat workspace or **Pro** for the full notebook IDE. You can change this later in **Settings → Appearance**.
+3. On **Connect an AI provider**, choose one:
+   - **Log in with your ChatGPT account** to connect a ChatGPT Plus / Pro subscription. Orion opens a pop-up window and finishes setup after sign-in succeeds.
+   - **Set up manually in Settings** to add an API key or local model endpoint under **Settings → Providers**.
+
+If you connect ChatGPT during onboarding and have not pinned models yet, Orion pins a few ChatGPT models so the chat picker is ready to use.
+
+## Step 2 — Connect to Jupyter
 
 Orion needs a Jupyter server to run notebooks, browse files, and use the integrated terminal.
 
 ### If you ran `orion` (recommended)
 
-The CLI starts Jupyter and opens Orion already connected. You should see step 1 marked complete in the **Get started** card.
+The CLI starts Jupyter and opens Orion already connected. You should see the Jupyter step marked complete in the **Get started** card.
 
 ### If you connect manually
 
@@ -49,14 +59,14 @@ The CLI starts Jupyter and opens Orion already connected. You should see step 1 
 
 For more detail, see [Connect to an external Jupyter server](/troubleshooting/connect-external-jupyter).
 
-## Step 2 — Open a workspace folder
+## Step 3 — Open a workspace folder
 
 1. In the **Files** panel on the left, browse to a project folder on your machine.
 2. Open the folder so Orion can list notebooks and other files.
 
-When a workspace is open, step 2 in the **Get started** card shows a checkmark and the card dismisses on its own.
+When a workspace is open, the workspace step in the **Get started** card shows a checkmark and the card dismisses on its own.
 
-## Step 3 — Open and run a notebook
+## Step 4 — Open and run a notebook
 
 1. In the Files panel, click a `.ipynb` file (or create one from the empty editor).
 2. Select a **kernel** from the toolbar if prompted.
@@ -64,7 +74,9 @@ When a workspace is open, step 2 in the **Get started** card shows a checkmark a
 
 If outputs appear, Jupyter and the kernel are working.
 
-## Step 4 — Add a provider (for chat)
+## Step 5 — Add a provider (for chat)
+
+Skip this step if you connected ChatGPT or another provider during onboarding.
 
 1. Open **Settings** (gear icon).
 2. Go to **Providers**.
@@ -72,10 +84,10 @@ If outputs appear, Jupyter and the kernel are working.
 
 See [API keys and providers](/configuration/api-keys-and-providers) for local models and ChatGPT OAuth.
 
-## Step 5 — Try the assistant
+## Step 6 — Try the assistant
 
 1. Open the **chat** panel on the right.
-2. Choose a **model** from the picker at the bottom.
+2. Choose a **model** from the picker at the bottom. The picker shows pinned models from **Settings → Models**.
 3. Ask a question about your notebook, for example: "Summarize what the last cell produced."
 
 Use `@` to attach files, cells, or variables to your message. Press **I** with a cell selected to mention that cell quickly.
