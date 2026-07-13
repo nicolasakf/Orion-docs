@@ -21,6 +21,8 @@ App View is **layout and composition**. Interactive sliders, buttons, and forms 
 
 If nothing is configured yet, you see **No cells in App View** with a hint to add content from Notebook view.
 
+In Business mode, App View is the main report surface. If the notebook has headings, Orion shows a compact table-of-contents rail beside the report; hover a marker to preview the section, or click it to jump there.
+
 ## Add content from Notebook view
 
 1. Switch to **Notebook view**.
@@ -28,6 +30,17 @@ If nothing is configured yet, you see **No cells in App View** with a hint to ad
 3. Choose **Add to App View** (or **Remove from App View** to undo).
 
 You can also ask the assistant to build or update an App View layout from your notebook content.
+
+## Edit App View content in Business mode
+
+1. Open the notebook in Business mode.
+2. Click **Edit** in the report toolbar.
+3. Click a markdown section to edit its text.
+4. Save the edit with **Save**, **Ctrl + Enter** on Windows/Linux, or **Command + Enter** on macOS.
+5. Right-click a markdown section or output and choose **Remove** to hide it from App View.
+6. Click **Done** when you are finished.
+
+Use **Ctrl + Z** on Windows/Linux or **Command + Z** on macOS to restore the most recently removed App View item before you leave the report.
 
 ## How App View is stored
 
@@ -79,4 +92,4 @@ A sample notebook with App View and `orion_ui` is included in the Orion reposito
 
 ---
 
-*Last updated May 2026.*
+*Last updated July 2026.*

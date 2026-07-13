@@ -1,6 +1,6 @@
 # Fix ChatGPT OAuth issues
 
-Use this guide when connecting **ChatGPT Plus** or **ChatGPT Pro** in **Settings → Providers → OpenAI** and the OAuth flow fails for reasons other than the disabled **Continue** button.
+Use this guide when connecting **ChatGPT Plus** or **ChatGPT Pro** in first-run setup or **Settings → Providers → OpenAI** and the OAuth flow fails for reasons other than the disabled **Continue** button.
 
 For the specific **device code authorization** error, see [Enable device code authorization for Codex](/troubleshooting/chatgpt-codex-device-authorization)—that fix applies first for most Plus/Pro connection failures.
 
@@ -8,13 +8,15 @@ For the specific **device code authorization** error, see [Enable device code au
 
 1. Confirm you sign in with the ChatGPT account that has the subscription you intend to use.
 2. Complete [device code authorization](/troubleshooting/chatgpt-codex-device-authorization) if **Continue** is disabled on the consent screen.
-3. In Orion, disconnect and use **Connect ChatGPT Plus / Pro** again.
+3. In Orion, disconnect and use **Connect ChatGPT Plus / Pro** again, or use **Log in with your ChatGPT account** during first-run setup.
 4. Allow the OAuth pop-up window if your browser blocks it (same as [PDF pop-up](/troubleshooting/pdf-export-blocked) settings).
-5. If the flow still fails, try an **OpenAI API key** instead under the same provider section for pay-per-token access.
+5. If Orion shows **Open ChatGPT sign-in**, click it to continue in a new browser window.
+6. If the flow still fails, try an **OpenAI API key** instead under the same provider section for pay-per-token access.
 
 ## When you need this
 
 - OAuth window closes without connecting
+- Pop-up blockers prevent the ChatGPT sign-in window from opening
 - Error after email verification but before Orion shows connected
 - Subscription account differs from the one used in ChatGPT web
 
@@ -30,4 +32,4 @@ For the specific **device code authorization** error, see [Enable device code au
 
 ---
 
-*Last updated June 2026.*
+*Last updated July 2026.*
