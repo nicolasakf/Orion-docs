@@ -66,6 +66,15 @@ For more detail, see [Connect to an external Jupyter server](/troubleshooting/co
 
 When a workspace is open, the workspace step in the **Get started** card shows a checkmark and the card dismisses on its own.
 
+### In the desktop app
+
+If no project is open, select **New project** and choose a folder in the system dialog. You can create a folder directly in that dialog, then select it as your project.
+
+To work in another Orion window, choose **File → New Window**:
+
+- **macOS:** press **Command + Shift + N**.
+- **Windows:** press **Ctrl + Shift + N**.
+
 ## Step 4 — Open and run a notebook
 
 1. In the Files panel, click a `.ipynb` file (or create one from the empty editor).
