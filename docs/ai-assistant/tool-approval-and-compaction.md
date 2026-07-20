@@ -19,6 +19,8 @@ Tool approval applies in **Agent** mode. **Ask** mode never runs tools. **Edit**
 
 Long chats consume context. Orion can **summarize earlier messages** to free space while keeping recent turns.
 
+The ring beside the send button shows how much of the selected model's context window the current chat uses. Hover over it to see the token total. When the ring warns that context is nearly full, click it to compact the chat.
+
 Ways to compact:
 
 - Type **`/compact`** in chat
@@ -28,7 +30,16 @@ After compaction, older detail is replaced by a summary. Re-mention important fi
 
 ## Session cost
 
-Type **`/cost`** to see approximate **cost and request totals** for the current chat session. Useful when comparing models or long agent runs.
+Type **`/cost`** to see request totals and the best available cost for the current chat, including a breakdown by model.
+
+Each cost shows a status so you can tell how it was calculated:
+
+- **Exact** — Orion received a reported cost for every request in that row.
+- **Estimated** or **Mixed** — at least some requests use a price estimate or a different cost source.
+- **Pending** — Orion is still waiting for a provider to report usage; use the refresh button on the cost card to check again.
+- **Unavailable** — Orion does not have enough pricing or usage information to calculate the cost.
+
+Treat this as a session-usage summary, not a provider invoice.
 
 ## Related
 
@@ -38,4 +49,4 @@ Type **`/cost`** to see approximate **cost and request totals** for the current 
 
 ---
 
-*Last updated May 2026.*
+*Last updated July 2026.*

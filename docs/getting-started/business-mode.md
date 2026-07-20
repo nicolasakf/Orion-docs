@@ -33,6 +33,16 @@ You can change the choice later from **Settings → Appearance**.
 
 Business mode still uses local Jupyter to run notebook code. If Orion asks you to connect a runtime, choose the Python environment that has your data libraries installed.
 
+## Search a project
+
+With a project open, press **Command + K** on macOS or **Ctrl + K** on Windows/Linux to search the workspace.
+
+1. Type at least two characters.
+2. Choose a result under **Files** to open that file, or choose a result under **Content** to open the matching line.
+3. Use the **Aa** button when you need a case-sensitive search.
+
+Search includes file names and file contents. It needs an open workspace and an active Jupyter connection.
+
 ## Edit a report
 
 1. Open a notebook in Business mode.

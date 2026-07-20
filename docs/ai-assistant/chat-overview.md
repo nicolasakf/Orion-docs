@@ -29,7 +29,17 @@ See [Agent, Research, Ask, and Edit modes](/ai-assistant/agent-ask-edit-modes).
 
 ## Fork a chat
 
-Use the fork action on a past user message when you want to try a different path without losing the original conversation. Orion creates a new chat that keeps the history up to that point. If later agent turns changed files, Orion asks whether to keep your current files or restore recorded edits back to the fork point first.
+After a completed assistant response, use **Fork from here** below that response when you want to try a different path without losing the original conversation. Orion opens a new chat containing the history through that response. Forking is unavailable while Orion is working.
+
+Use **Copy message** below an assistant response to copy its text.
+
+## Edit and resend a message
+
+1. Wait for Orion to finish its current response.
+2. Click the earlier **user message** you want to change. Orion loads its text and mentions into the chat input.
+3. Revise the message and send it.
+
+Orion replaces that message and continues from it, so the later turns in the current chat are replaced by the new response.
 
 ## Send messages and queue
 
