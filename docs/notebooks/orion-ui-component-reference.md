@@ -34,6 +34,14 @@ Most interactive controls take a **`key`** (non-empty string) and bind to Python
 | `default_value` | varies | Initial value when no runtime state exists yet. |
 | `value` | omitted or scalar | When **omitted**, registers the default without overwriting user input on rerun. When **provided**, must be a `str`, `int`, `float`, or `bool` and **forces** that value on rerun. |
 | `options` | list of `str` or `dict` | Each entry may be a string (label and value) or a dict with `"value"` and optional `"label"`. |
+| `on_change` | `dict` or `None` | Optional cell execution action dispatched after the new value reaches Python state. |
+| `debounce_ms` | non-negative `int` or `None` | Overrides the smart action delay. `0` runs immediately. |
+
+Without a `debounce_ms` override, selections, presets, and keyboard nudges run
+immediately, typing and time inputs wait 500 ms, and slider or date-range
+dragging waits 250 ms after the latest change. Calendar ranges run only after
+both endpoints are selected. Controls without `on_change` never run cells
+automatically.
 
 ### Option lists (`select`, `radio_group`, `toggle_group`)
 
@@ -62,13 +70,16 @@ Example:
 presets=[{"label": "Today", "daysOffset": 0}]
 ```
 
-### Button actions
+### Cell execution actions
 
 | Parameter | Shape |
 | --- | --- |
 | `action` | `{"type": "execute_cells", "cellIds": ["stable-orion-cell-id"]}` |
+| `on_change` | `{"type": "execute_cells", "cellIds": ["stable-orion-cell-id"]}` |
 
 `cellIds` must reference existing `cells[i].metadata.orion.id` values in the notebook.
+Use `on_change` on a state-bound control or `action` on `ui.button`. Prefer a
+button for expensive or destructive work.
 
 ---
 
@@ -190,7 +201,7 @@ Horizontal rule.
 
 ## Controls
 
-### `ui.input(key, label=None, default_value="", value=<unset>, placeholder=None, input_type="text", class_name=None)`
+### `ui.input(key, label=None, default_value="", value=<unset>, placeholder=None, input_type="text", on_change=None, debounce_ms=None, class_name=None)`
 
 Text input bound to Python state. Also accepts shared control parameters above.
 
@@ -200,15 +211,15 @@ Text input bound to Python state. Also accepts shared control parameters above.
 | `placeholder` | `str` or `None` | `None` |
 | `input_type` | HTML input type, for example `"text"`, `"email"`, `"password"`, `"number"` | `"text"` |
 
-### `ui.textarea(key, label=None, default_value="", value=<unset>, placeholder=None, class_name=None)`
+### `ui.textarea(key, label=None, default_value="", value=<unset>, placeholder=None, on_change=None, debounce_ms=None, class_name=None)`
 
 Multi-line text input. `default_value` is `""`.
 
-### `ui.select(key, options, label=None, default_value=None, value=<unset>, placeholder=None, class_name=None)`
+### `ui.select(key, options, label=None, default_value=None, value=<unset>, placeholder=None, on_change=None, debounce_ms=None, class_name=None)`
 
 Dropdown select. See option lists and shared control parameters.
 
-### `ui.slider(key, label=None, min=0, max=100, default_value=0, value=<unset>, step=1, class_name=None)`
+### `ui.slider(key, label=None, min=0, max=100, default_value=0, value=<unset>, step=1, on_change=None, debounce_ms=None, class_name=None)`
 
 Numeric slider.
 
@@ -219,19 +230,19 @@ Numeric slider.
 | `default_value` | `int` or `float` | `0` |
 | `step` | `int` or `float` | `1` |
 
-### `ui.checkbox(key, label=None, default_value=False, value=<unset>, class_name=None)`
+### `ui.checkbox(key, label=None, default_value=False, value=<unset>, on_change=None, debounce_ms=None, class_name=None)`
 
 Checkbox. `default_value` is `bool`, default `False`.
 
-### `ui.switch(key, label=None, default_value=False, value=<unset>, class_name=None)`
+### `ui.switch(key, label=None, default_value=False, value=<unset>, on_change=None, debounce_ms=None, class_name=None)`
 
 On/off switch. `default_value` is `bool`, default `False`.
 
-### `ui.radio_group(key, options, label=None, default_value=None, value=<unset>, class_name=None)`
+### `ui.radio_group(key, options, label=None, default_value=None, value=<unset>, on_change=None, debounce_ms=None, class_name=None)`
 
 Mutually exclusive radio buttons. See option lists.
 
-### `ui.toggle(key, label=None, default_value=False, value=<unset>, variant=None, class_name=None)`
+### `ui.toggle(key, label=None, default_value=False, value=<unset>, variant=None, on_change=None, debounce_ms=None, class_name=None)`
 
 Boolean toggle button.
 
@@ -240,11 +251,11 @@ Boolean toggle button.
 | `default_value` | `bool` | `False` |
 | `variant` | `"default"`, `"outline"` (unrecognized → `"default"`) | `None` |
 
-### `ui.toggle_group(key, options, label=None, default_value=None, value=<unset>, variant=None, class_name=None)`
+### `ui.toggle_group(key, options, label=None, default_value=None, value=<unset>, variant=None, on_change=None, debounce_ms=None, class_name=None)`
 
 Exclusive toggle button group. See option lists. `variant`: `"default"` or `"outline"`.
 
-### `ui.calendar(key, label=None, mode="single", default_value="", value=<unset>, caption_layout=None, from_year=None, to_year=None, number_of_months=None, show_outside_days=False, presets=None, class_name=None)`
+### `ui.calendar(key, label=None, mode="single", default_value="", value=<unset>, caption_layout=None, from_year=None, to_year=None, number_of_months=None, show_outside_days=False, presets=None, on_change=None, debounce_ms=None, class_name=None)`
 
 Inline calendar. See date and time values and date presets.
 
@@ -261,7 +272,7 @@ Inline calendar. See date and time values and date presets.
 
 `"dropdown"` shows month/year selects. `"dropdown-buttons"` adds previous/next month buttons alongside the selects.
 
-### `ui.date_picker(key, label=None, mode="single", default_value="", value=<unset>, placeholder=None, caption_layout=None, from_year=None, to_year=None, number_of_months=None, show_outside_days=False, presets=None, class_name=None)`
+### `ui.date_picker(key, label=None, mode="single", default_value="", value=<unset>, placeholder=None, caption_layout=None, from_year=None, to_year=None, number_of_months=None, show_outside_days=False, presets=None, on_change=None, debounce_ms=None, class_name=None)`
 
 Popover date picker. Accepts the same date parameters as `ui.calendar`, plus:
 
@@ -269,7 +280,20 @@ Popover date picker. Accepts the same date parameters as `ui.calendar`, plus:
 | --- | --- | --- |
 | `placeholder` | `str` or `None` — trigger text when empty; renderer defaults to `"Pick a date"` or `"Pick a date range"` | `None` |
 
-### `ui.date_time_picker(key, label=None, default_value="", value=<unset>, start_time_key=None, end_time_key=None, start_time_label="Start time", end_time_label="End time", default_start_time="09:00:00", default_end_time="17:00:00", caption_layout=None, from_year=None, to_year=None, show_outside_days=False, presets=None, class_name=None)`
+### `ui.date_range_slider(key, label=None, default_value=None, value=<unset>, visible_months=4, min_days=1, presets=None, on_change=None, debounce_ms=None, class_name=None)`
+
+Draggable date-range timeline. The value is a JSON range string. Users can
+move the full range, adjust either endpoint, use arrow keys, or select a
+preset.
+
+| Parameter | Allowed values / type | Default |
+| --- | --- | --- |
+| `default_value` | JSON date-range string or `None` | Last 30 days |
+| `visible_months` | `int` | `4` |
+| `min_days` | positive `int` | `1` |
+| `presets` | list of range preset dicts or `None` | This month, Last 7D, 30D, and 90D |
+
+### `ui.date_time_picker(key, label=None, default_value="", value=<unset>, start_time_key=None, end_time_key=None, start_time_label="Start time", end_time_label="End time", default_start_time="09:00:00", default_end_time="17:00:00", caption_layout=None, from_year=None, to_year=None, show_outside_days=False, presets=None, on_change=None, debounce_ms=None, class_name=None)`
 
 Date picker with start and end time inputs. Date uses `key` (`"YYYY-MM-DD"`). Times use separate keys as `"HH:MM:SS"` strings.
 

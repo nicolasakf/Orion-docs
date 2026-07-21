@@ -61,7 +61,35 @@ model = ui.get("model")
 
 - **`default_value`** sets the initial value. When you rerun the UI cell, Orion **preserves** the user's current selection instead of resetting to the default.
 - Use **`value=`** only when you intentionally want to force or reset state on rerun.
-- Changing a control does **not** automatically rerun downstream cells. Rerun dependent cells manually, or add a button with an explicit run action (below).
+- Changing a control reruns cells only when you add an explicit `on_change`
+  action. Controls without it keep the current state-only behavior.
+
+## Run cells when a control changes
+
+Every user-editable, state-bound control supports `on_change`:
+
+```python
+ui.date_picker(
+    "start_date",
+    label="Start date",
+    on_change={
+        "type": "execute_cells",
+        "cellIds": ["your-cell-id"],
+    },
+)
+```
+
+Orion saves the new value to Python state before running the target cells.
+Selections, presets, and keyboard nudges run immediately. Typing waits 500 ms
+after the latest edit, while slider and date-range dragging wait 250 ms. Set
+`debounce_ms=0` for immediate execution or use another non-negative
+millisecond value. Date ranges run only after both endpoints are selected.
+
+The supported helpers are `ui.input`, `ui.textarea`, `ui.select`, `ui.slider`,
+`ui.checkbox`, `ui.switch`, `ui.radio_group`, `ui.toggle`, `ui.toggle_group`,
+`ui.calendar`, `ui.date_picker`, `ui.date_range_slider`, and
+`ui.date_time_picker`. The date-time picker applies the same action to its
+date, start-time, and end-time values.
 
 ## Run cells from a button
 
@@ -75,6 +103,8 @@ ui.button(
 ```
 
 Ask the assistant to inspect cell ids in notebook metadata if you need the correct id.
+Use a button instead of `on_change` when the calculation is expensive or the
+action is destructive.
 
 ## Charts
 

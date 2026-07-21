@@ -76,13 +76,13 @@ model = ui.get("model")
 - **`default_value`** — Initial value. Rerunning the UI cell **preserves** the user's current selection.
 - **`value=`** — Forces or resets state on rerun; use only when intentional.
 - **`ui.set()`** — Replaces state; do not use it to define defaults (use `default_value` or `ui.define_default()`).
-- Control changes do **not** auto-rerun downstream cells. Rerun manually or add a button with an execute action.
+- Control changes run cells only when the control declares `on_change`.
 
 ## Layout and control helpers
 
 **Containers:** `ui.page`, `ui.stack`, `ui.grid`, `ui.section`, `ui.card`, `ui.tabs`, `ui.accordion`, `ui.collapsible`, `ui.carousel`, `ui.separator`
 
-**Controls:** `ui.input`, `ui.textarea`, `ui.select`, `ui.slider`, `ui.checkbox`, `ui.switch`, `ui.radio_group`, `ui.toggle`, `ui.toggle_group`, `ui.calendar`, `ui.date_picker`, `ui.date_time_picker`, `ui.button`
+**Controls:** `ui.input`, `ui.textarea`, `ui.select`, `ui.slider`, `ui.checkbox`, `ui.switch`, `ui.radio_group`, `ui.toggle`, `ui.toggle_group`, `ui.calendar`, `ui.date_picker`, `ui.date_range_slider`, `ui.date_time_picker`, `ui.button`
 
 **Display:** `ui.label`, `ui.badge`, `ui.alert`, `ui.progress`, `ui.avatar`, `ui.popover`, `ui.hover_card`, `ui.tooltip`, `ui.markdown_cell`, `ui.output`, `ui.table`
 
@@ -91,6 +91,22 @@ model = ui.get("model")
 Optional `class_name="..."` on any component; define matching selectors in `metadata.orion.appView.css`.
 
 Full parameter reference: [Orion UI component reference](/notebooks/orion-ui-component-reference).
+
+## Run cells when state changes
+
+```python
+ui.select(
+    "region",
+    ["North", "South", "East", "West"],
+    on_change={"type": "execute_cells", "cellIds": ["stable-orion-cell-id"]},
+)
+```
+
+Orion writes state before running the cells. Selections, presets, and keyboard
+nudges run immediately, typing waits 500 ms, and slider or date-range dragging
+waits 250 ms. Use a
+non-negative `debounce_ms` to override the delay. Date ranges run only when
+both endpoints exist. Prefer a button for expensive or destructive work.
 
 ## Run cells from a button
 
