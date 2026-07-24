@@ -15,6 +15,7 @@ This page is the hub. Each built-in skill has a **longer user guide** linked bel
 | [Create app](/ai-assistant/builtin-skills/create-app) | `/create-app` | Lay out App View dashboards from notebook metadata |
 | [Orion metadata](/ai-assistant/builtin-skills/orion-metadata) | `/orion-metadata` | Valid keys under `metadata.orion` in notebooks |
 | [Orion settings](/ai-assistant/builtin-skills/orion-settings) | `/orion-settings` | Read or change user and workspace settings JSON |
+| [Orion docs](/ai-assistant/builtin-skills/orion-docs) | `/orion-docs` | Answer Orion product questions from the official documentation |
 | [Chat history](/ai-assistant/builtin-skills/chat-history) | `/chat-history` | Search and summarize past Orion chats stored locally |
 | [Deep EDA](/ai-assistant/builtin-skills/deep-eda) | `/deep-eda` | Start Research mode with an exhaustive exploratory data analysis profile |
 
@@ -57,6 +58,7 @@ You do not need to memorize skill names. Plain-language requests work:
 - "Run a thorough EDA on this dataset" → loads **deep-eda** and starts a Research-mode investigation
 - "What did we decide about the data pipeline last week?" → loads **chat-history**
 - "Pin Gemini as the default model for this repo" → loads **orion-settings**
+- "How does Ask mode work?" → loads **orion-docs**
 
 If a skill does not appear in the slash palette after you add workspace files, reconnect the Jupyter kernel or reload Orion.
 

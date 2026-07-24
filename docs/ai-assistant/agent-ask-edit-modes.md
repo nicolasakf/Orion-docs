@@ -18,9 +18,9 @@ Use Agent when you want the assistant to **do work** in your project: fix bugs, 
 
 ## Ask mode
 
-**Ask** is **read-only**. The assistant can inspect notebooks, files, variables, and outputs but cannot change anything or run code.
+**Ask** is **read-only**. The assistant can inspect notebooks, files, variables, outputs, and the list of available kernels, but cannot change anything or run code. It can also load skills for specialized instructions; loading a skill does not modify your workspace.
 
-Use Ask when you want explanations, reviews, or planning without risk of edits—for example, "Explain this traceback" or "What does this function assume about the dataframe?"
+Use Ask when you want explanations, reviews, or planning without risk of edits—for example, "Explain this traceback," "What does this function assume about the dataframe?", or "How does Orion App View work?" Orion can load the **orion-docs** built-in skill for product questions.
 
 ## Research mode (beta)
 

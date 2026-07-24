@@ -316,6 +316,10 @@ export default defineConfig({
                 link: "/ai-assistant/builtin-skills/orion-settings",
               },
               {
+                text: "Orion docs",
+                link: "/ai-assistant/builtin-skills/orion-docs",
+              },
+              {
                 text: "Chat history",
                 link: "/ai-assistant/builtin-skills/chat-history",
               },
