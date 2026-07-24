@@ -27,7 +27,6 @@ The entire Orion codebase is public. You can read every line, inspect every rele
 2. Drag **Orion** to **Applications**.
 3. Open Orion from **Applications** or Spotlight.
 4. If macOS blocks the app:
-   - **Right-click** Orion in Applications, choose **Open**, then confirm **Open**, or
    - Open **System Settings → Privacy & Security**, scroll to the Orion message, and choose **Open Anyway**.
 
 ### Windows

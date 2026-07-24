@@ -28,7 +28,7 @@ After sign-in, the menu shows your email under **Orion Cloud**. Open **Settings*
 5. Set **Title** and **Description**.
 6. Review **Hide input cells in published page** (on by default). When checked, code inputs are hidden in the published snapshot, similar to a presentation export. The uploaded source `.ipynb` still contains full cells when download is enabled.
 7. To require a password before viewers can open the link, enter it in **Password**. Leave the field blank for a public link.
-8. Optionally check **Allow viewers to download the source .ipynb**. Required for the **Open in Orion** import flow.
+8. Optionally check **Allow viewers to download the notebook source code**. Required for the **Open in Orion** import flow.
 9. Click **Publish**.
 
 Orion saves pending cell edits, uploads the notebook bundle, and shows a share link. Use **Copy link** or **Open** to view the published page.

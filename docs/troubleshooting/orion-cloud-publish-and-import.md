@@ -82,7 +82,7 @@ See [Connect to an external Jupyter server](/troubleshooting/connect-external-ju
 
 **Symptom:** The handoff page shows **Source import unavailable** or **The publisher disabled source import and download.**
 
-**Fix:** The notebook owner did not enable **Allow viewers to download the source .ipynb** when publishing. Ask them to republish with that option checked, or share the notebook another way (for example [export as HTML](/notebooks/export-notebooks)).
+**Fix:** The notebook owner did not enable **Allow viewers to download the notebook source code** when publishing. Ask them to republish with that option checked, or share the notebook another way (for example [export as HTML](/notebooks/export-notebooks)).
 
 ## Import handoff expired
 
