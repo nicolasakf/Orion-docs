@@ -38,6 +38,8 @@ Orion generates short titles for new conversations using a separate **title gene
 
 This is independent of the model you select for messages in the chat input.
 
+When you choose a title generation model, Orion tests it before saving the setting. If verification fails, select a model from a configured provider that can complete a short non-streaming request, then try again. Your previous title model remains selected until verification succeeds.
+
 ## Unavailable models
 
 If a model is grayed out, locked, or missing:

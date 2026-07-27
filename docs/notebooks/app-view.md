@@ -31,6 +31,10 @@ In Business mode, App View is the main report surface. If the notebook has headi
 
 You can also ask the assistant to build or update an App View layout from your notebook content.
 
+## Return to the source cell
+
+In Pro mode, right-click an App View markdown section or output and choose **Go to source** to open its original cell in Notebook view. This is useful when you spot a result that needs a code or markdown change without searching through the notebook.
+
 ## Edit App View content in Business mode
 
 1. Open the notebook in Business mode.

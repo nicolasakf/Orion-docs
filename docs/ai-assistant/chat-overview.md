@@ -47,6 +47,16 @@ Type a message and press **Enter** to send. While the agent is working, you can 
 
 Use **@** to attach context (files, cells, variables). See [Mentions](/ai-assistant/mentions).
 
+## Attach files from your computer
+
+Use the **+** button beside the send button to attach files that are not already in the workspace. Add a short instruction with the file, such as “Summarize this CSV” or “Compare this image with the chart in the notebook,” then send the message.
+
+- Non-image files need an active Jupyter connection. Orion copies them to managed storage on that Jupyter server so the assistant can use them with workspace tools.
+- Image-capable models can receive image attachments directly. With a model that cannot see images, Orion still attaches the image as a file reference, but the model cannot inspect the pixels.
+- Wait for an upload to finish before sending, switching chats, or deleting the chat.
+
+Managed non-image attachments expire after 30 days without activity in the chat. Attach the file again if an older conversation says that its attachment is unavailable.
+
 ## Slash commands
 
 Type `/` in the chat box to open the command palette. Built-in commands include:

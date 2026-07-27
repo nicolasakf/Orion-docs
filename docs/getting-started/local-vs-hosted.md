@@ -24,6 +24,8 @@ The `orion` command (from the `orion-notebook` package) starts Jupyter, launches
 
 See [Install Orion](/getting-started/install) and the [CLI reference](/configuration/cli-reference).
 
+When Orion manages the local Jupyter server, **Copy path** in the workspace copies the file's absolute path on that machine. For a remote or manually configured Jupyter server whose root path is not available to Orion, it copies the workspace-relative path instead.
+
 ## Hosted app
 
 Open [app.orion-agent.ai](https://app.orion-agent.ai) in your browser without installing the CLI.

@@ -11,7 +11,9 @@ Core notebook workflows in Orion: running cells, inspecting variables, presentat
 | Run all code above selection | **Alt + A** |
 | Run selected cell and all below | **Alt + B** |
 
-Click the **Run** controls in the toolbar for run-all and stop actions when visible.
+Use the **Run All Cells** button in the toolbar to run the whole notebook and stop at the first error. Open its arrow menu when you need **Run All Cells (Ignore Errors)** or **Restart Kernel and Run All Cells**. If Orion stops on an error, choose **Go to error** to jump to that cell.
+
+Use **Interrupt Kernel** to stop current work, or **Restart Kernel** to start the selected kernel fresh. Restarting clears Python variables and cancels queued cell runs, so run the cells that recreate the state you need afterward.
 
 ## Edit cells
 
