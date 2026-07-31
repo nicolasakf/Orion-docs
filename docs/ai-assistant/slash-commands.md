@@ -31,6 +31,10 @@ Sub-agents are notebooks named `*.agent.ipynb` under `.agents/subagents/` or `.o
 
 When a skill or sub-agent has a known definition file, the palette may offer **Edit definition** to open its `SKILL.md` or `.agent.ipynb` in the editor.
 
+## Refresh workspace commands
+
+After you add or change a workspace skill or sub-agent, type **`/`** to open the palette and select the **Refresh skills and subagents** button in its upper-right corner. Orion scans the workspace again without leaving the chat, so the new or changed `/name` command is ready to use.
+
 ## Commands not listed
 
 Skills with `disable-model-invocation: true` in frontmatter do not auto-load for the model but still appear as slash commands you can invoke manually.
@@ -43,4 +47,4 @@ Skills with `disable-model-invocation: true` in frontmatter do not auto-load for
 
 ---
 
-*Last updated May 2026.*
+*Last updated July 2026.*
