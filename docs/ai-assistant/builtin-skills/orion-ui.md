@@ -86,7 +86,7 @@ model = ui.get("model")
 
 **Display:** `ui.label`, `ui.badge`, `ui.alert`, `ui.progress`, `ui.avatar`, `ui.popover`, `ui.hover_card`, `ui.tooltip`, `ui.markdown_cell`, `ui.output`, `ui.table`
 
-`ui.table()` supports pandas DataFrames with optional `title` and `column_descriptions` for readable table headings and info-icon tooltips.
+`ui.table()` supports pandas DataFrames with optional `title` and `column_descriptions` for readable table headings and info-icon tooltips. Use `default_filters` and `default_sort` to start a table in a filtered, sorted Default view; the available filter controls adapt to each column's type.
 
 Optional `class_name="..."` on any component; define matching selectors in `metadata.orion.appView.css`.
 
@@ -161,4 +161,4 @@ Sample notebook in the Orion repo: `public/test-files/orion_ui_sample.ipynb`.
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*

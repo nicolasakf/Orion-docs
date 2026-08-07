@@ -41,6 +41,17 @@ Use **Copy message** below an assistant response to copy its text.
 
 Orion replaces that message and continues from it, so the later turns in the current chat are replaced by the new response.
 
+## Rename a chat with AI
+
+Orion creates a short title after a chat receives its first response. To replace
+it, double-click the title in the chat header, or choose **Rename chat** from
+the chat menu. Select **Generate title with AI**, review the suggested title,
+then press **Enter** or click away to save it.
+
+You need at least one user message and one assistant response. Set the title
+model and maximum title length under **Settings → Models → Chat titles**. See
+[Models and tool approval](/configuration/models-and-tool-approval).
+
 ## Send messages and queue
 
 Type a message and press **Enter** to send. While the agent is working, you can **queue** another message; it runs when the current turn finishes.
@@ -88,4 +99,4 @@ The assistant can search and summarize past chats when the **chat-history** buil
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*

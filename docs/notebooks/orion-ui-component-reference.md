@@ -413,7 +413,7 @@ Embed another cell's rendered output.
 | `output_index` | `int` — zero-based index into that cell's outputs | `0` |
 | `class_name` | See styling hook | `None` |
 
-### `ui.table(dataframe, source, title=None, mode="paginated", page_size=50, show_index=True, max_cell_chars=200, column_descriptions=None, class_name=None)`
+### `ui.table(dataframe, source, title=None, mode="paginated", page_size=50, show_index=True, max_cell_chars=200, column_descriptions=None, default_filters=None, default_sort=None, class_name=None)`
 
 Interactive table for a pandas DataFrame. Orion keeps the full DataFrame in the Python kernel and sends only bounded row windows to the browser.
 
@@ -427,6 +427,8 @@ Interactive table for a pandas DataFrame. Orion keeps the full DataFrame in the 
 | `show_index` | `bool` — show the DataFrame index as the first column | `True` |
 | `max_cell_chars` | `int` — maximum characters sent for one non-scalar cell | `200` |
 | `column_descriptions` | mapping of `str` to `str` or `None` — header tooltips; use `"__index__"` for the index column | `None` |
+| `default_filters` | sequence of filter mappings — each has `column`, `operation`, and `value` | `None` |
+| `default_sort` | mapping with `column` and `direction` (`"asc"` or `"desc"`) | `None` |
 | `class_name` | See styling hook | `None` |
 
 Example:
@@ -445,10 +447,43 @@ ui.table(
         "order_total": "Total order value after discounts",
         "region": "Sales territory for the customer account",
     },
+    default_filters=[
+        {"column": "region", "operation": "equals", "value": "North"},
+    ],
+    default_sort={"column": "order_total", "direction": "desc"},
 )
 ```
 
 Column descriptions appear as info-icon tooltips in table headers.
+
+Use `default_filters` and `default_sort` to open a table in a useful initial
+view. They are also restored when you reset the table to its **Default** view.
+Each column can have one default filter, and Orion currently supports one
+default sort.
+
+The filter menu adapts to the column type: text columns offer text matching,
+numbers and dates offer comparisons and an inclusive `between` range, boolean
+columns offer true/false choices, and small categorical columns offer multiple
+value selection. For `between`, pass both bounds; for categorical `in` or
+`notIn`, pass a list of values:
+
+```python
+default_filters=[
+    {
+        "column": "created_at",
+        "operation": "between",
+        "value": {
+            "lower": "2026-01-01T00:00:00",
+            "upper": "2026-01-31T23:59:59",
+        },
+    },
+    {
+        "column": "status",
+        "operation": "in",
+        "value": ["active", "pending"],
+    },
+]
+```
 
 Use `mode="paginated"` for page controls or `mode="virtual"` for scroll-window loading:
 
@@ -506,4 +541,4 @@ Use Plotly, Altair, Vega-Lite, or your usual plotting libraries for charts. Orio
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*

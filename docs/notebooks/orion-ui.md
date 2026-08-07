@@ -130,12 +130,23 @@ ui.table(
         "order_total": "Total order value after discounts",
         "region": "Sales territory for the customer account",
     },
+    default_filters=[
+        {"column": "region", "operation": "equals", "value": "North"},
+    ],
+    default_sort={"column": "order_total", "direction": "desc"},
 )
 ```
 
 The `source` argument is required. Use the Python expression that names or recreates the DataFrame, such as `"df"` or `"orders_df"`. Orion uses it when saving table views so the output metadata can include readable pandas expressions for filters and sorts.
 
 Use `column_descriptions` when table headers need plain-language definitions. Keys should match DataFrame column names after string conversion. Use `"__index__"` to describe the index column.
+
+Use `default_filters` and `default_sort` when the table should open in a
+specific view. Resetting the table to **Default** restores those values. Filter
+controls match the pandas column type: text columns support text matching,
+numeric and date columns support comparisons and inclusive ranges, boolean
+columns use true/false choices, and small categorical columns support selecting
+multiple values. See the [Orion UI component reference](/notebooks/orion-ui-component-reference#ui-table-dataframe-source-title-none-mode-paginated-page-size-50-show-index-true-max-cell-chars-200-column-descriptions-none-default-filters-none-default-sort-none-class-name-none) for the accepted filter shapes.
 
 For very large DataFrames, keep the default `mode="paginated"` or use `mode="virtual"` when you prefer scrolling through windows:
 
@@ -172,4 +183,4 @@ The Orion repository includes `public/test-files/orion_ui_sample.ipynb` demonstr
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*

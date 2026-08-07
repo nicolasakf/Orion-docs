@@ -38,6 +38,15 @@ Orion generates short titles for new conversations using a separate **title gene
 
 This is independent of the model you select for messages in the chat input.
 
+Under **Settings → Models → Chat titles**, set **Maximum title length** to the
+number of characters you want Orion to use. Orion accepts values from 10 to
+100. The limit also applies when you generate a replacement title yourself.
+
+To replace a title, double-click the current title in the chat header (or use
+**Rename chat** from the chat menu), then select **Generate title with AI**.
+Orion needs at least one user message and one assistant response to generate a
+title.
+
 When you choose a title generation model, Orion tests it before saving the setting. If verification fails, select a model from a configured provider that can complete a short non-streaming request, then try again. Your previous title model remains selected until verification succeeds.
 
 ## Unavailable models
@@ -60,4 +69,4 @@ Project teams can override chat settings (including pins and title model) in `<w
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*

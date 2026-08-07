@@ -248,7 +248,7 @@ export default defineConfig({
                   },
                   {
                     text: "ui.table",
-                    link: "/notebooks/orion-ui-component-reference#ui-table-dataframe-source-title-none-mode-paginated-page-size-50-show-index-true-max-cell-chars-200-column-descriptions-none-class-name-none",
+                    link: "/notebooks/orion-ui-component-reference#ui-table-dataframe-source-title-none-mode-paginated-page-size-50-show-index-true-max-cell-chars-200-column-descriptions-none-default-filters-none-default-sort-none-class-name-none",
                   },
                 ],
               },
