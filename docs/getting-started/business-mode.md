@@ -12,6 +12,21 @@ Choose **Pro** instead when you want the full notebook-first IDE with cells, cod
 
 You can change the choice later from **Settings → Appearance**.
 
+## Add personal context for the assistant
+
+After choosing an AI provider, Business mode offers a short interview called **Help Orion understand your work**. It helps you give the assistant useful background, such as your role, the kind of analysis you do, and where data access is configured.
+
+1. Answer the interview questions, then choose **Review profile**.
+2. Edit the proposed profile before saving it.
+3. Choose **Save to ORION.md** when it is accurate, or **Skip for now** to finish onboarding without a profile.
+
+Orion includes this local background in agent conversations. It does not give Orion access to anything new or override its safety and workspace rules. Never include passwords, API keys, tokens, or private keys.
+
+To review, change, resume, or delete it later, open **Settings → Personal context**. The file is stored locally at:
+
+- **macOS / Linux:** `~/.orion/ORION.md`
+- **Windows:** `%USERPROFILE%\.orion\ORION.md`
+
 ## What changes
 
 - Orion opens a chat-first workspace focused on projects and reports.
@@ -62,4 +77,4 @@ If you remove the wrong item, press **Ctrl + Z** on Windows/Linux or **Command +
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*

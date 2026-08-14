@@ -16,11 +16,12 @@ Managed files are stored under:
 
 New installs show a short onboarding flow before the workspace opens.
 
-1. On **Sign in to Orion**, sign in to Orion Cloud if you want cloud publishing and account features, or skip sign-in for now.
+1. On **Sign in to Orion**, sign in to Orion Cloud to continue setup. If you use Google and are already signed in to more than one Google account in your browser, choose the account you want to use with Orion.
 2. On **Welcome to Orion**, choose **Business** for a simpler data-and-chat workspace or **Pro** for the full notebook IDE. You can change this later in **Settings → Appearance**.
 3. On **Connect an AI provider**, choose one:
    - **Log in with your ChatGPT account** to connect a ChatGPT Plus / Pro subscription. Orion opens a pop-up window and finishes setup after sign-in succeeds.
    - **Set up manually in Settings** to add an API key or local model endpoint under **Settings → Providers**.
+4. If you chose **Business**, **Help Orion understand your work** appears next. Answer the short interview to create personal context for the assistant, or choose **Skip for now**. You can resume it later in **Settings → Personal context**.
 
 If you connect ChatGPT during onboarding and have not pinned models yet, Orion pins a few ChatGPT models so the chat picker is ready to use.
 
@@ -110,4 +111,4 @@ Use `@` to attach files, cells, or variables to your message. Press **I** with a
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*

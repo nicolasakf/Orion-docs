@@ -42,6 +42,8 @@ Press **H** in command mode (cell selected, not editing) to open the full shortc
 
 Open the **Variables** panel in the left sidebar to list kernel variables. Orion shows readiness indicators so you know when inspector data is current.
 
+Use the **Filter variables** field to narrow the list by variable name. Use the sort control in the panel header to switch between the kernel's order and alphabetical order, and use **Refresh variables** after running code when you need an updated list. Click a variable to inspect its details.
+
 Use **@** in chat to mention a variable by name so the assistant sees live values and types.
 
 ## Presentation mode
@@ -82,4 +84,4 @@ For files Orion cannot open directly, **Settings → Appearance → Unsupported 
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*

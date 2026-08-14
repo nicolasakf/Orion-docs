@@ -141,6 +141,8 @@ The `source` argument is required. Use the Python expression that names or recre
 
 Use `column_descriptions` when table headers need plain-language definitions. Keys should match DataFrame column names after string conversion. Use `"__index__"` to describe the index column.
 
+In the table, click cells to select them. Hold **Command** on macOS or **Ctrl** on Windows/Linux to add or remove cells from the selection. The footer shows the selected-cell count; for numeric selections, choose **Sum**, **Mean**, or **Median** there when you need a quick aggregate. The column-width control cycles through fitting columns to titles, fitting them to the loaded cell contents, and restoring the previous widths.
+
 Use `default_filters` and `default_sort` when the table should open in a
 specific view. Resetting the table to **Default** restores those values. Filter
 controls match the pandas column type: text columns support text matching,
