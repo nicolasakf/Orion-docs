@@ -38,6 +38,17 @@ Use **Settings → Appearance** for normal changes. See [Business mode](/getting
 
 Default: `default`.
 
+## `chat.notifyOnAgentFinish` and `chat.playSoundOnAgentFinish`
+
+Control alerts when a full agent run completes (all tool steps and auto-continuations finished).
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `notifyOnAgentFinish` | boolean | `true` | Show a desktop or browser notification when a run finishes while Orion is in the background. On web, the browser may ask for notification permission the first time you enable this or send a message. |
+| `playSoundOnAgentFinish` | boolean | `true` | Play a short chime when a run finishes (even when Orion is focused). |
+
+Both are available in **Settings → Agent → Communication**. Notifications are skipped when you stop a run or when a queued follow-up message sends immediately after.
+
 ## `notebook.output`
 
 Controls how notebook outputs render (not the `.ipynb` file itself).
