@@ -261,6 +261,7 @@ App chrome defaults. Session-only UI state may still override these until Orion 
 
 | Key | Default | Description |
 | --- | --- | --- |
+| `userTerminalWorkingDirectory` | `workspace` | Where user-created terminals start: `workspace` (current workspace) or `home` (Jupyter root, usually `~/`). Agent terminals ignore this. |
 | `mobileBreakpointPx` | `768` | Width at or below mobile layout applies |
 | `minRefreshSpinMs` | `500` | Minimum refresh spinner duration |
 | `toastLimit` | `1` | Max simultaneous toasts |
@@ -273,4 +274,4 @@ App chrome defaults. Session-only UI state may still override these until Orion 
 
 ---
 
-*Last updated July 2026.*
+*Last updated August 2026.*
