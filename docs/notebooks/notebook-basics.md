@@ -64,6 +64,20 @@ Orion renders Plotly, Vega, HTML, images, LaTeX, GeoJSON, PDF previews, streams,
 
 Plotly rendering notes: [Plotly version compatibility](/troubleshooting/plotly-version-compatibility).
 
+## Keep output history
+
+Wrap a chart, table, or other rich output in `ui.version()` when you want to compare it with earlier successful runs of the same cell.
+
+```python
+import orion_ui as ui
+
+ui.version(fig, key="monthly-sales", max_versions=5)
+```
+
+Rerun the cell after changing the result. Orion keeps the latest output plus up to `max_versions - 1` earlier versions in the notebook. When more than one version exists, hover over the output and use **Version** to choose an earlier one; each entry shows when Orion captured it.
+
+`max_versions` includes the current output and defaults to `10`. If a cell has several versioned outputs that you might reorder, give each one a unique `key` so Orion can keep the correct history with it. See [the `ui.version()` reference](/notebooks/orion-ui-component-reference#ui-versionvalue-keynone-max_versions10).
+
 ## Views
 
 Toggle **Notebook view** and **App View** from the toolbar. See [App View](/notebooks/app-view) and [Export notebooks](/notebooks/export-notebooks).
@@ -75,6 +89,14 @@ When no file is open, Orion shows shortcut cards for recent files, pinned files,
 If a file is too large to open comfortably in the editor, Orion warns before loading it. Choose **Open anyway** only when you expect the editor to handle the file size, or cancel and mention the file in chat instead.
 
 For files Orion cannot open directly, **Settings → Appearance → Unsupported files** controls whether clicking the file mentions it in chat or opens it with your system's default app.
+
+## Changes to an open text file
+
+If Jupyter or another application changes, renames, or deletes a text file while it is open in Orion, an alert appears above the editor.
+
+- For **This file changed on disk**, choose **Save editor version** to keep your unsaved Orion edits, or **Reload disk version** to replace them with the file on disk.
+- For **This file was renamed**, Orion follows the new path and keeps your current editor content. You can still save your version or reload the renamed file from disk.
+- For **This file was deleted on disk**, Orion keeps the editor content. Choose **Save editor version** to recreate the file at its current path.
 
 ## Related
 

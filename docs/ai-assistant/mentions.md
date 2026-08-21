@@ -8,6 +8,7 @@ In the chat input, type **`@`** to open the mention menu. You can also:
 
 - **Right-click** a file in the Files panel and choose to mention it in chat
 - Select a notebook cell and press **`I`** to mention that cell
+- **Right-click** a Markdown cell and choose **Mention cell in chat**
 - Use the floating **@** popover when text is selected in assistant messages or tool output (Orion 0.6+)
 
 ## What you can mention
@@ -16,7 +17,7 @@ In the chat input, type **`@`** to open the mention menu. You can also:
 | --- | --- |
 | **Files** | `@src/utils.py` — include a script in context |
 | **Folders** | `@data/` — scope analysis to a directory |
-| **Notebook cells** | Selected cell via **`I`** or cell mention picker |
+| **Notebook cells** | Selected cell via **`I`**, or a Markdown cell from **right-click → Mention cell in chat** |
 | **Variables** | Kernel variables from the variable inspector |
 | **Terminal** | Recent terminal output |
 | **Conversation** | Snippets from prior assistant or tool messages |
@@ -34,4 +35,4 @@ In the chat input, type **`@`** to open the mention menu. You can also:
 
 ---
 
-*Last updated May 2026.*
+*Last updated August 2026.*

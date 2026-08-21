@@ -26,7 +26,11 @@ Ways to compact:
 - Type **`/compact`** in chat
 - Use the **compact** control in the chat UI when context is nearly full
 
+If a model rejects a message because the context is too large, Orion automatically tries one compaction, checks that the smaller request fits, and resends it. The chat stays intact while this runs. If Orion cannot make the request small enough, it stops and explains why; compact manually, start a new chat, or remove unneeded attachments and mentions before sending again.
+
 After compaction, older detail is replaced by a summary. Re-mention important files or cells if the assistant loses specifics you still need.
+
+Orion inserts a **Conversation compacted** marker in the chat history after a successful compaction. Click it to read the saved summary, including the model and the approximate tokens freed when that information is available.
 
 ## Session cost
 

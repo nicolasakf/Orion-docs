@@ -413,6 +413,22 @@ Embed another cell's rendered output.
 | `output_index` | `int` — zero-based index into that cell's outputs | `0` |
 | `class_name` | See styling hook | `None` |
 
+### `ui.version(value, key=None, max_versions=10)`
+
+Keeps rich-output snapshots from earlier successful runs of a notebook cell. Use it as the final expression in the cell around a value that IPython can display, such as a Plotly figure, pandas table, or image.
+
+```python
+ui.version(fig, key="revenue-chart", max_versions=5)
+```
+
+| Parameter | Allowed values / type | Default |
+| --- | --- | --- |
+| `value` | Any value supported by IPython's rich display formatter | — |
+| `key` | Non-empty `str` or `None` | `None` |
+| `max_versions` | `int` ≥ 1; includes the current output | `10` |
+
+When a cell contains more than one versioned output, use a unique `key` for each output if their order might change. Without a key, Orion matches outputs by position. In Notebook view, hover over an output with history and choose **Version** to open a timestamped list of the latest and earlier snapshots.
+
 ### `ui.table(dataframe, source, title=None, mode="paginated", page_size=50, show_index=True, max_cell_chars=200, column_descriptions=None, default_filters=None, default_sort=None, class_name=None)`
 
 Interactive table for a pandas DataFrame. Orion keeps the full DataFrame in the Python kernel and sends only bounded row windows to the browser.
